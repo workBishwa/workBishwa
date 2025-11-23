@@ -1,6 +1,9 @@
 {% include base_path %}
 
+{%- comment -%}
+  The main footer content is kept in `_includes/footer/custom.html`.
+  This file loads the footer and ensures `base_path` is available for any
+  relative links. Keep this file minimal to avoid duplication.
+{%- endcomment -%}
 
-<div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
-</div>
+{% include "footer/custom.html" %}
