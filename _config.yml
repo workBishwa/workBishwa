@@ -1,183 +1,150 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
-# server process.
+# Site-wide configuration for Jekyll
+# - This file is loaded at build time. Restart `jekyll serve` after editing.
+# - Keep values here focused on site metadata, collections, build options, and plugins.
+# - Remove theme-specific settings before you remove the theme files.
+locale: "en-US"
 
-# Basic Site Settings
-locale                   : "en-US"
-title                    : "Bishwa"
-title_separator          : "-"
-name                     : &name "Bishwa Prakash Puri"
-description              : &description "Bishwa description"
-url                      : https://bishwapuri.com.np # the base hostname & protocol for your site (custom domain)
-baseurl                  : "" # when using a custom domain at the root, keep this blank
-repository               : "workBishwa/imBishwa.github.io"
+# Basic site identity
+title: "Bishwa"
+description: "Bishwa description"
+title_separator: " - "
+url: "https://bishwapuri.com.np"   # Primary site URL (no trailing slash)
+baseurl: ""                         # Use '' for root domain, '/repo' for project pages
+repository: "workBishwa/imBishwa.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
+# Author metadata (used in templates / includes)
 author:
-  # Biographic information
-  avatar           : "profile.png"
-  name             : "Bishwa Prakash Puri"
-  pronouns         : # example: "she/her"  
-  bio              : "A boring 😊 yet curious soul 🌱 on a lifelong journey of discovery 🌍. My opinions change 🔄 as I grow 📚, learn 💡, and embrace new perspectives ✨"
-  location         : "Kathmandu, Nepal"
-  employer         : 
-  uri              : https://bishwapuri.com.np/
-  email            : "work.bishwapuri@gmail.com" 
+  name: "Bishwa Prakash Puri"
+  avatar: "/images/profile.png"
+  pronouns: ""
+  bio: "A curious soul on a lifelong journey of discovery. Opinions evolve with new learning and experience."
+  location: "Kathmandu, Nepal"
+  employer: ""
+  uri: "https://bishwapuri.com.np/"
+  email: "work.bishwapuri@gmail.com"
+  # optional academic / social handles (leave blank if unused)
+  arxiv: ""
+  googlescholar: ""
+  orcid: ""
+  researchgate: ""
+  github: "workBishwa"
+  linkedin: "imbishwapuri"
 
-  # Academic websites
-  arxiv            : 
-  googlescholar    : 
-  impactstory      : 
-  orcid            : 
-  semantic         : 
-  pubmed           : 
-  researchgate     : 
-  scopus           : 
-
-  # Repositories and software development
-  
-  dribbble         : 
-  github           :    
-
-  # Social media
-
-  linkedin : imbishwapuri
-  
-
-# Publication Category - The following the list of publication categories and their headings
+# Publication categories (site-level labels used in templates)
 publication_category:
   books:
-    title: 'Books'
+    title: "Books"
   manuscripts:
-    title: 'Journal Articles'    
+    title: "Journal Articles"
   conferences:
-    title: 'Conference Papers'
+    title: "Conference Papers"
 
-# Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
+# Site behaviour
+teaser: ""                      # fallback teaser image filename in /images/ (optional)
+breadcrumbs: false
+words_per_minute: 160
+future: true                    # show future-dated posts when building locally
+read_more: "disabled"           # enable/disable automatic "Read more" links in excerpts
+talkmap_link: false
+
+# Comments / discussion provider
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider: false               # false, "disqus", "discourse", "facebook", "staticman", "custom"
   disqus:
-    shortname            :
+    shortname: ""
   discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+    server: ""
   facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    appid: ""
+    num_posts: 5
+    colorscheme: "light"
+
+# Staticman configuration (if you use Staticman)
 staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
+  allowedFields: ["name", "email", "url", "message"]
+  branch: "main"                # which branch Staticman should commit to
+  commitMessage: "New comment."
+  filename: "comment-{@timestamp}"
+  format: "yml"
+  moderation: true
+  path: "_data/comments/{options.slug}"
+  requiredFields: ["name", "email", "message"]
   transforms:
-    email                : "md5"
+    email: "md5"
   generatedFields:
     date:
-      type               : "date"
+      type: "date"
       options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+        format: "iso8601"
+
+# Atom / RSS feed settings
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
-  path                   : # blank (default) uses feed.xml
+  hide: false
+  path: ""                      # default feed.xml (blank uses default)
 
+# Verification / SEO tokens
+google_site_verification: ""
+bing_site_verification: ""
+alexa_site_verification: ""
+yandex_site_verification: ""
 
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
-
-
-# Social Sharing
+# Social / Open Graph defaults
 twitter:
-  username               :
+  username: ""
 facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :  # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  username: ""
+  app_id: ""
+  publisher: ""
+og_image: ""                     # Default OG image (absolute or relative to site root)
 
+# Social links (array of objects used in templates; keep empty to omit)
+social_links:
+  - name: "github"
+    url: "https://github.com/workBishwa"
+  - name: "linkedin"
+    url: "https://www.linkedin.com/in/imbishwapuri"
+  # add others as needed
 
-# Analytics
+# Analytics (pick one provider and set values)
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider: false               # false, "google", "google-universal", "google-analytics-4", "custom"
   google:
-    tracking_id          :
+    tracking_id: ""             # e.g. "G-XXXXXXXXXX" for GA4
 
-
-# Reading Files
+# Files to include / exclude from the build
 include:
-  - .htaccess
-  - _pages
-  - files
-  - _posts
+  - ".htaccess"
+  - "_pages"
+  - "files"
+  - "_posts"
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .github
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
-  - Dockerfile
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
-  - vendor
+  - ".asset-cache"
+  - ".bundle"
+  - ".jekyll-cache"
+  - ".sass-cache"
+  - "node_modules"
+  - "vendor"
+  - "tmp"
+  - "log"
+  - "Dockerfile"
+  - "package.json*"
+  - "README"
+  - "CHANGELOG"
+  - "Gemfile"
+  - "Rakefile"
+
 keep_files:
-  - .git
-  - .svn
+  - ".git"
+  - ".svn"
+
+# Encoding & Markdown
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Conversion
 markdown: kramdown
 highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
 
-
-# Markdown Processing
+# Kramdown & math
 kramdown:
-  math_engine: mathjax
   input: GFM
   hard_wrap: false
   auto_ids: true
@@ -186,9 +153,9 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  math_engine: mathjax
 
-
-# These settings control the types of collections used by the template
+# Collections (keep content; templates/layouts will control presentation)
 collections:
   teaching:
     output: true
@@ -206,10 +173,8 @@ collections:
     output: true
     permalink: /study-abroad/:path/
 
-
-# These settings control how pages and collections are included in the site
+# Defaults for different content types (set layouts or behaviour per type)
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -220,14 +185,14 @@ defaults:
       comments: true
       share: true
       related: true
-  # _pages
+
   - scope:
       path: ""
       type: pages
     values:
       layout: single
       author_profile: true
-  # _teaching
+
   - scope:
       path: ""
       type: teaching
@@ -236,7 +201,7 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _publications
+
   - scope:
       path: ""
       type: publications
@@ -245,7 +210,7 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
+
   - scope:
       path: ""
       type: portfolio
@@ -254,7 +219,7 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _talks
+
   - scope:
       path: ""
       type: talks
@@ -263,7 +228,6 @@ defaults:
       author_profile: true
       share: true
 
-  # _study-abroad
   - scope:
       path: ""
       type: study-abroad
@@ -273,21 +237,16 @@ defaults:
       share: true
       comments: true
 
-
-# Sass/SCSS
+# Sass / SCSS configuration
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
-
-# Outputting
+# Permalinks & timezone
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: "Etc/UTC"
 
-
-# Plugins
+# Plugins (declare any plugins you need)
 plugins:
   - jekyll-feed
   - jekyll-gist
@@ -296,7 +255,7 @@ plugins:
   - jekyll-redirect-from
   - jemoji
 
-# Mimic GitHub Pages with --safe
+# Security: when using --safe, whitelist needed plugins
 whitelist:
   - jekyll-feed
   - jekyll-gist
@@ -305,38 +264,15 @@ whitelist:
   - jekyll-redirect-from
   - jemoji
 
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
+# Archive configuration (liquid-based by default)
 category_archive:
   type: liquid
   path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
 
-
-# HTML Compression
-# - http://jch.penibelst.de/
+# HTML compression (if using a compressor include)
 compress_html:
   clippings: all
   ignore:
