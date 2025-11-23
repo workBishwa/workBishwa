@@ -1,18 +1,13 @@
 
-        /* Unique Class Names for Main Layout */
-        .bishwa-footer-main {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1a26; /* Deep charcoal/blue-black */
-        }
-        .footer-content-wrapper {
-            max-width: 1280px;
-        }
-        .contact-info-block, .service-links-section, .mission-statement-card {
-            /* Styling for internal structure */
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-        }
-        .copyright-bar {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
+/* Footer CSS (fallback)
+   ---------------------
+   This file is kept for backwards compatibility if the SASS build is not run.
+   Preferred workflow: edit `_sass/_footer.scss` and compile `assets/css/main.css`.
+*/
+
+.bishwa-footer-main{font-family:Inter, sans-serif;background-color:#0d1a26}
+.footer-content-wrapper{max-width:1280px;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem}
+.contact-info-block,.service-links-section,.mission-statement-card{padding:1rem;border-radius:.5rem}
+.copyright-bar{border-top:1px solid rgba(255,255,255,.06)}
+
+/* If you maintain SASS, remove or ignore edits here — keep SASS as single source */
