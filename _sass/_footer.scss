@@ -108,58 +108,69 @@
    ====================================================================== */
 
 .bishwa-footer-main {
-  // Use the project's base font stack where appropriate. Override here only if needed.
+  // Base
   font-family: $global-font-family, 'Inter', sans-serif;
   background-color: #0d1a26; // deep charcoal-blue
   color: $lighter-gray;
-  animation: footer-intro-animation 0.5s ease-out both;
-  animation-delay: 0.25s;
+  animation: footer-intro-animation 0.45s ease-out both;
+  animation-delay: 0.2s;
+  padding: 2rem 0;
 
-  // Ensure links have a clear accessible color contrast
-  a {
-    color: rgba(255,255,255,0.92);
-    &:hover { color: $teal; }
-  }
-
-  // Section spacing
+  // Container: centers content and limits width
   .footer-content-wrapper {
     max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 
+  // Links
+  a {
+    color: rgba(255,255,255,0.92);
+    text-decoration: none;
+    &:hover { color: $teal; text-decoration: underline; }
+  }
+
+  // Top area (if present) uses utility classes in markup; keep minimal component styles
   .mission-statement-card,
   .service-links-section,
   .contact-info-block {
-    padding: 1rem;
-    border-radius: 0.5rem;
+    padding: 0.75rem 0;
   }
 
-  .footer-title { font-size: 1.5rem; font-weight: 800; color: $teal; }
-  .footer-subtitle { font-size: 0.85rem; color: mix(#fff, $gray, 45%); text-transform: uppercase; letter-spacing: 0.04em; }
+  .footer-title { font-size: 1.25rem; font-weight: 700; color: $teal; margin: 0 0 0.25rem 0; }
+  .footer-subtitle { font-size: 0.85rem; color: mix(#fff, $gray, 45%); text-transform: uppercase; margin-bottom: 0.5rem; }
+
   .footer-text { color: mix(#fff, $gray, 55%); line-height: 1.6; }
-  .footer-email { color: $teal; font-weight: 600; }
 
-  .footer-heading { font-weight: 700; margin-bottom: 0.4rem; }
-  .footer-links { list-style: none; padding: 0; margin: 0; li { margin-bottom: 0.6rem; } }
+  .footer-cta { display:inline-block; background:$teal; color:#fff; padding:.5rem .75rem; border-radius:.375rem; }
 
-  .footer-cta {
-    display: inline-block;
-    background: $teal;
-    color: #fff;
-    padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
+  // Copyright bar (bottom)
+  .copyright-bar {
+    border-top: 1px solid rgba(255,255,255,0.04);
+    margin-top: 1.25rem;
+    background: transparent;
+    .footer-content-wrapper { padding: .75rem 1rem; }
+
+    // inner flex layout
+    > div {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap: .5rem;
+    }
+
+    .footer-legal { color: mix(#fff, $gray, 50%); font-size: .85rem;
+      a { color: inherit; margin: 0 .4rem; }
+    }
   }
 
-  .footer-social { margin-top: 0.75rem; .social-link { margin-right: 0.75rem; color: mix(#fff,$gray,40%); } }
-
-  .copyright-bar { border-top: 1px solid rgba(255,255,255,0.06); background: transparent; }
-
-  // Responsive tweaks
+  // Responsive: horizontal layout for copyright row on medium screens
   @include breakpoint(md) {
-    .footer-content-wrapper { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .copyright-bar > .footer-content-wrapper > div {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }
