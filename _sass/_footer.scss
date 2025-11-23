@@ -90,3 +90,30 @@
     }
   }
 }
+
+        /* Define the subtle fade-in animation based on the user's CSS */
+        @keyframes footer-intro-animation {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Unique Class Names for Main Layout */
+        .bishwa-footer-main {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1a26; /* Deep charcoal/blue-black */
+            /* Apply the entrance animation */
+            animation: footer-intro-animation 0.5s ease-out both;
+            animation-delay: 0.3s; /* Delay for subtle appearance after page load */
+        }
+        .footer-content-wrapper {
+            max-width: 1280px;
+        }
+        .contact-info-block, .service-links-section, .mission-statement-card {
+            /* Styling for internal structure */
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .copyright-bar {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
