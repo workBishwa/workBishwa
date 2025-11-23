@@ -1,66 +1,6 @@
-{% include base_path %}
 
-{%- comment -%}
-  Single-file footer include
-
-  This file is the single source of truth for the site footer. Keep all
-  footer markup here to avoid duplication and Jekyll include-name issues
-  (GitHub Pages / Jekyll 3.x disallow slashes in include names).
-
-  Notes for maintainers:
-  - Use `site.author.*` variables defined in `_config.yml` for contact info.
-  - Visual styles live in `_sass/_footer.scss` (preferred). A small
-    `assets/css/footer.css` exists as a fallback for older builds — prefer
-    compiling SASS to CSS and committing the compiled CSS instead.
-  - The footer uses semantic landmarks (role="contentinfo") and ARIA labels.
-{%- endcomment -%}
 
 <footer class="bishwa-footer-main" role="contentinfo" aria-label="Site footer">
-  <!-- Wrapper ensures consistent horizontal padding and centers content -->
-  <div class="footer-content-wrapper mx-auto px-4 sm:px-6 lg:px-8 py-10">
-
-    <!-- Top grid: identity + quick links + contact -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-
-      <!-- Identity / mission block (spans two columns on medium+) -->
-      <div class="mission-statement-card md:col-span-2">
-        <!-- Use site variables so authors can update via _config.yml -->
-        <h3 class="footer-title">{{ site.author.name | default: "Bishwa Prakash Puri" }}</h3>
-        <p class="footer-subtitle">Assistant Professor · Business Development · Environmental Consultant</p>
-        <p class="footer-text">I combine education, research and practical sustainability solutions to create measurable impact. I accept consultations, collaborations and research partnerships.</p>
-        <p>
-          <a class="footer-email" href="mailto:{{ site.author.email | default: 'work.bishwapuri@gmail.com' }}">📧 {{ site.author.email | default: 'work.bishwapuri@gmail.com' }}</a>
-        </p>
-      </div>
-
-      <!-- Quick links / services -->
-      <nav class="service-links-section" aria-label="Key solutions">
-        <h4 class="footer-heading">Key Solutions</h4>
-        <ul class="footer-links">
-          <li><a href="/study-abroad/">🎓 Study Abroad — USA, UK, Australia, Europe &amp; Others</a></li>
-          <li><a href="/research-collaboration/">📊 Research Collaboration — Climate, Hydrology, Hazard Analysis</a></li>
-          <li><a href="/business-development/">🤝 Business Development — Growth strategies and consulting</a></li>
-          <li><a href="/environmental-consultation/">🌱 Environmental Consultation — EIA, IEE, GIS, Sustainability</a></li>
-        </ul>
-      </nav>
-
-      <!-- Contact / CTA -->
-      <section class="contact-info-block" aria-label="Contact and consultation">
-        <h4 class="footer-heading">Get Connected</h4>
-        <p class="footer-text">Tell me about your project — I’ll respond to inquiries about consulting, collaboration and research.</p>
-        <a href="/contact/" class="footer-cta" role="button">Schedule Consultation</a>
-
-        <div class="footer-social" aria-hidden="false">
-          <!-- Replace # with real social URLs in _config.yml or here -->
-          <a href="#" aria-label="LinkedIn" class="social-link">LinkedIn</a>
-          <a href="#" aria-label="Research profile" class="social-link">Research</a>
-        </div>
-      </section>
-
-    </div>
-
-  </div>
-
   <!-- Copyright bar (bottom) -->
   <div class="copyright-bar">
     <div class="footer-content-wrapper mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center text-center text-xs text-gray-400">
