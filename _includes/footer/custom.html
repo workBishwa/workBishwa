@@ -1,8 +1,27 @@
 <footer class="bishwa-footer-main" role="contentinfo" aria-label="Site footer">
+  <div class="footer-links-section mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+  <div>
+    <h4 class="font-bold text-white mb-3">Quick Links</h4>
+    <ul class="space-y-2">
+      <li><a href="/about/" class="text-gray-400 hover:text-white">About Us</a></li>
+      <li><a href="/services/" class="text-gray-400 hover:text-white">Services</a></li>
+      <li><a href="/blog/" class="text-gray-400 hover:text-white">Blog</a></li>
+      <li><a href="/faq/" class="text-gray-400 hover:text-white">FAQ</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="font-bold text-white mb-3">Contact</h4>
+    <ul class="space-y-2">
+      <li><a href="mailto:info@domain.com" class="text-gray-400 hover:text-white">info@domain.com</a></li>
+      <li><p class="text-gray-400">123 Business St, City, Country</p></li>
+      <li><a href="/contact/" class="text-gray-400 hover:text-white">Contact Page</a></li>
+    </ul>
+  </div>
+  </div>
   <!-- Copyright bar (bottom) -->
   <div class="copyright-bar">
     <div class="footer-content-wrapper mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center text-center text-xs text-gray-400">
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.title }}. All rights reserved.</p>
+      <p>&copy; {{ site.time | date: '%Y-%m-%d' }} {{ site.author.name | default: site.title }}. All rights reserved.</p>
       <div class="footer-legal mt-2 md:mt-0">
         <a href="/privacy/">Privacy Policy</a>
         <span class="mx-2">|</span>
