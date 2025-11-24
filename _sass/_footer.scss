@@ -62,11 +62,12 @@
 
 .bishwa-footer-main {
   font-family: $global-font-family, 'Inter', sans-serif;
-  background-color: #0d1a26;
+  background-color: #38536d50;
   color: $lighter-gray;
   animation: footer-intro-animation 0.45s ease-out both;
   animation-delay: 0.2s;
   padding: 2rem 0;
+  bottom: 0.1rem;
 
   .footer-content-wrapper {
     max-width: 1280px;
