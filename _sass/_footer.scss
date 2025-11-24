@@ -9,12 +9,8 @@
   margin-right: 0;
   width: 100%;
   clear: both;
-  /* sticky footer fix start */
-    /* Keep footer in normal flow; avoid absolute positioning which can overlap content.
-      If you want a sticky footer, consider using flex layout on the page container. */
-    position: relative;
-    height: auto;
-    /* sticky footer fix end */
+  position: relative;
+  height: auto;
   margin-top: 3em;
   color: mix(#fff, $gray, 25%);
   -webkit-animation: intro 0.3s both;
@@ -54,122 +50,76 @@
   }
 }
 
-.page__footer-copyright {
-  font-family: $global-font-family;
-  font-size: $type-size-7;
+/* Define the subtle fade-in animation based on the user's CSS */
+@keyframes footer-intro-animation {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-.page__footer-follow {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  li {
-    display: inline-block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: $sans-serif-narrow;
-    font-size: $type-size-6;
-    text-transform: uppercase;
-  }
-
-  li + li:before {
-    content: "";
-    padding-right: 5px;
-  }
-
-  a {
-    padding-right: 10px;
-    font-weight: bold;
-  }
-
-  .social-icons {
-    a {
-      white-space: nowrap;
-    }
-  }
-}
-
-        /* Define the subtle fade-in animation based on the user's CSS */
-        @keyframes footer-intro-animation {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
 
 /* ======================================================================
    BISHWA FOOTER COMPONENT
-
-   Purpose: Provide a single, documented place for footer-specific styles.
-   - Prefer editing the SASS below and re-compiling `main.scss`.
-   - Keep selectors scoped (e.g. `.bishwa-footer-main`) to avoid global collisions.
-   - This block focuses on layout, spacing, colors and small interactive states.
    ====================================================================== */
 
 .bishwa-footer-main {
-  // Base
   font-family: $global-font-family, 'Inter', sans-serif;
-  background-color: #0d1a26; // deep charcoal-blue
+  background-color: #0d1a26;
   color: $lighter-gray;
   animation: footer-intro-animation 0.45s ease-out both;
   animation-delay: 0.2s;
   padding: 2rem 0;
 
-  // Container: centers content and limits width
   .footer-content-wrapper {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 1rem;
   }
 
-  // Links
   a {
     color: rgba(255,255,255,0.92);
     text-decoration: none;
     &:hover { color: $teal; text-decoration: underline; }
   }
 
-  // Top area (if present) uses utility classes in markup; keep minimal component styles
-  .mission-statement-card,
-  .service-links-section,
-  .contact-info-block {
-    padding: 0.75rem 0;
-  }
-
-  .footer-title { font-size: 1.25rem; font-weight: 700; color: $teal; margin: 0 0 0.25rem 0; }
-  .footer-subtitle { font-size: 0.85rem; color: mix(#fff, $gray, 45%); text-transform: uppercase; margin-bottom: 0.5rem; }
-
-  .footer-text { color: mix(#fff, $gray, 55%); line-height: 1.6; }
-
-  .footer-cta { display:inline-block; background:$teal; color:#fff; padding:.5rem .75rem; border-radius:.375rem; }
-
-  // Copyright bar (bottom)
   .copyright-bar {
     border-top: 1px solid rgba(255,255,255,0.04);
     margin-top: 1.25rem;
     background: transparent;
-    .footer-content-wrapper { padding: .75rem 1rem; }
 
-    // inner flex layout
-    > div {
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
+    .footer-content-wrapper {
+      padding: .75rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap: .5rem;
+      font-size: .75rem;
+      color: $gray-400;
     }
 
-    .footer-legal { color: mix(#fff, $gray, 50%); font-size: .85rem;
-      a { color: inherit; margin: 0 .4rem; }
+    p {
+      margin: 0;
+    }
+
+    .footer-legal {
+      color: mix(#fff, $gray, 50%);
+      font-size: .85rem;
+      display: flex;
+      align-items: center;
+
+      a {
+        color: inherit;
+        margin: 0 .4rem;
+      }
+
+      span.mx-2 {
+        margin: 0 .5rem;
+      }
     }
   }
 
-  // Responsive: horizontal layout for copyright row on medium screens
   @include breakpoint(md) {
-    .copyright-bar > .footer-content-wrapper > div {
+    .copyright-bar .footer-content-wrapper {
       flex-direction: row;
-      align-items: center;
       justify-content: space-between;
     }
   }
