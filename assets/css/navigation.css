@@ -1,0 +1,274 @@
+/* --- RESET & BASICS --- */
+* {
+  box-sizing: border-box; /* Prevents padding from breaking widths */
+}
+
+/* Base Navbar */
+.jk-navbar {
+  max-width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  position: relative;
+  height: 70px;
+  z-index: 1000;
+}
+
+.jk-navbar-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Brand */
+.jk-navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+}
+
+/* --- TOGGLE BUTTON (Mobile) --- */
+.jk-navbar-toggle {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1002; /* Above menu and overlay */
+}
+
+.jk-navbar-toggle-bar {
+  width: 24px;
+  height: 2px;
+  background: #333;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger "X" Animation */
+.jk-navbar-toggle.active .jk-navbar-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.jk-navbar-toggle.active .jk-navbar-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+.jk-navbar-toggle.active .jk-navbar-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --- DESKTOP MENU --- */
+.jk-navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.jk-navbar-item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.jk-navbar-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between text and arrow */
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.jk-navbar-link:hover {
+  color: #0077cc;
+}
+
+/* Arrow styling */
+.arrow {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #333;
+  transition: transform 0.3s ease;
+}
+
+.jk-navbar-item:hover .arrow {
+  transform: rotate(180deg);
+  border-top-color: #0077cc;
+}
+
+.jk-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;       /* Fix: align to the right of parent */
+  left: auto;     /* Prevent conflict */
+
+  background: #fff;
+  border: 1px solid #eee;
+  min-width: 200px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 8px;
+
+  /* Hide animation */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+  z-index: 1100;
+}
+
+/* FIX: The Invisible Bridge 
+   This pseudo-element fills the gap between the link and the menu
+   so the mouse doesn't "fall through".
+*/
+.jk-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -20px; /* Extends upwards to meet the navbar */
+  left: 0;
+  width: 100%;
+  height: 20px; 
+  background: transparent;
+}
+
+.jk-dropdown-link {
+  text-align: left;
+  display: block;
+  padding: 10px 20px;
+  color: #444;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.jk-dropdown-link:hover {
+  background: #f5f9ff;
+  color: #0077cc;
+}
+
+
+
+/* Show dropdown on hover (Desktop only) */
+@media (min-width: 993px) {
+  .jk-navbar-item:hover .jk-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* --- MOBILE STYLES (Max width 992px) --- */
+@media (max-width: 992px) {
+  .jk-navbar-toggle {
+    display: flex;
+  }
+
+  /* Overlay Dimmer */
+  .jk-navbar-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+  .jk-navbar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Side Drawer Menu */
+  .jk-navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hide off screen */
+    width: 280px; /* Fixed width prevents layout break */
+    height: 100vh; /* Full height */
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start; /* Left align text */
+    gap: 0;
+    padding-top: 80px; /* Space for close button */
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+    overflow-y: auto; /* IMPORTANT: Enables scrolling within menu */
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  }
+
+  .jk-navbar-menu.active {
+    right: 0;
+  }
+
+  .jk-navbar-item {
+    width: 100%;
+    height: auto;
+    flex-direction: column; /* Stack link and dropdown vertically */
+    align-items: flex-start;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .jk-navbar-link {
+    width: 100%;
+    padding: 15px 20px;
+    justify-content: space-between; /* Push arrow to right */
+    font-size: 1.1rem;
+  }
+
+  /* Mobile Dropdown (Accordion Style) */
+  .jk-dropdown-menu {
+    position: static; /* No absolute positioning on mobile */
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: #f9f9f9;
+    width: 100%;
+    padding: 0;
+    
+    /* Collapsed by default */
+    display: none; 
+  }
+  
+  .jk-dropdown-menu::before {
+    display: none; /* Remove bridge on mobile */
+  }
+
+  /* Open state controlled by JS */
+  .jk-navbar-item.open .jk-dropdown-menu {
+    display: block;
+    animation: slideDown 0.3s ease;
+  }
+  
+  .jk-navbar-item.open .arrow {
+    transform: rotate(180deg);
+  }
+
+  .jk-dropdown-link {
+    padding-left: 40px; /* Indent sub-items */
+  }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

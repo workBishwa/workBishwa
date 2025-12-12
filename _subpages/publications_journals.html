@@ -1,0 +1,59 @@
+---
+layout: page
+title: "Journal Articles"
+permalink: /publications/journals/
+---
+
+<section class="journals-intro">
+  <h1>Journal Articles</h1>
+  <p class="intro-text">
+    A curated collection of peer-reviewed journal articles representing my ongoing 
+    contributions to research, scholarship, and evidence-based inquiry.  
+    These publications reflect work across environmental science, climate research, 
+    and interdisciplinary studies aimed at advancing knowledge and informing practice.
+  </p>
+</section>
+
+{% assign articles = site.categories.publications_journals | sort: "date" | reverse %}
+
+<section class="journals-list-section">
+
+  {% if articles and articles.size > 0 %}
+
+    <div class="journal-card-container">
+      {% for post in articles %}
+        <article class="journal-card">
+
+          <a href="{{ post.url }}" class="journal-card-link" aria-label="Read more about {{ post.title }}">
+
+            <h2 class="journal-title">{{ post.title }}</h2>
+            <h3>{{ post.journal }}</h3>
+            <h3>{{ post.authors }}</h3>
+
+            <div class="journal-meta">
+              <span class="journal-date">
+                {{ post.date | date: "%B %Y" }}
+              </span>
+            </div>
+
+            <p class="journal-excerpt">
+              {% if post.excerpt %}
+                {{ post.excerpt | strip_html | truncatewords: 65 }}
+              {% else %}
+                Click to view abstract, full citation, and additional details.
+              {% endif %}
+            </p>
+
+          </a>
+
+        </article>
+      {% endfor %}
+    </div>
+
+  {% else %}
+
+    <p class="no-publications">No journal articles have been published yet.</p>
+
+  {% endif %}
+
+</section>

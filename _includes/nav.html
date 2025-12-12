@@ -1,0 +1,76 @@
+<!-- _includes/nav.html - Enhanced Navigation with 3-Level Dropdowns -->
+
+
+<nav class="jk-navbar" role="navigation" aria-label="Main navigation">
+  <div class="jk-navbar-container">
+    <a href="{{ '/' | relative_url }}" class="jk-navbar-brand" aria-label="Home">
+      {{ site.title }}
+    </a>
+
+    <button class="jk-navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu">
+      <span class="jk-navbar-toggle-bar"></span>
+      <span class="jk-navbar-toggle-bar"></span>
+      <span class="jk-navbar-toggle-bar"></span>
+    </button>
+
+    <ul class="jk-navbar-menu" id="navbar-menu">
+      {% assign nav = site.data.navigation.main %}
+      {% for item in nav %}
+        <li class="jk-navbar-item {% if item.children %}has-dropdown{% endif %}">
+          <a href="{{ item.url | relative_url }}" 
+             class="jk-navbar-link"
+             {% if item.children %}
+               aria-haspopup="true" 
+               aria-expanded="false"
+               data-dropdown-toggle
+             {% endif %}>
+            {{ item.title }}
+            {% if item.children %}
+              <span class="jk-navbar-arrow" aria-hidden="true">▾</span>
+            {% endif %}
+          </a>
+          
+          {% if item.children %}
+            <ul class="jk-dropdown-menu" role="menu">
+              {% for child in item.children %}
+                <li class="jk-dropdown-item {% if child.children %}has-dropdown{% endif %}" role="none">
+                  <a href="{{ child.url | relative_url }}" 
+                     class="jk-dropdown-link"
+                     role="menuitem"
+                     {% if child.children %}
+                       aria-haspopup="true" 
+                       aria-expanded="false"
+                       data-dropdown-toggle
+                     {% endif %}>
+                    {{ child.title }}
+                    {% if child.children %}
+                      <span class="jk-navbar-arrow" aria-hidden="true">›</span>
+                    {% endif %}
+                  </a>
+                  
+                  {% if child.children %}
+                    <!-- Level 3 Dropdown -->
+                    <ul class="jk-dropdown-menu" role="menu">
+                      {% for subchild in child.children %}
+                        <li class="jk-dropdown-item" role="none">
+                          <a href="{{ subchild.url | relative_url }}" 
+                             class="jk-dropdown-link"
+                             role="menuitem">
+                            {{ subchild.title }}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  <!-- Mobile overlay -->
+  <div class="jk-navbar-overlay" aria-hidden="true"></div>
+</nav>

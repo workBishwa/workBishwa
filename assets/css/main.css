@@ -1,17 +1,26 @@
-/* Error: expected "{".
- *    ,
- * 13 | @import "vendor/breakpoint/breakpoint"; // media query mixins
- *    |                                       ^
- *    '
- *   assets\css\main.scss 13:39  root stylesheet */
+/* assets/css/main.css - Enhanced Main Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 13 \2502  @import "vendor/breakpoint/breakpoint"; // media query mixins\d\a    \2502                                        ^\a    \2575 \a   assets\\css\\main.scss 13:39  root stylesheet';
-}
+@import url('index.css');
+@import url('search.css');
+
+/* Import modular stylesheets */
+
+@import url('navigation.css');
+
+
+@import url('footer.css');
+
+@import url('post.css');
+
+
+
+@import url('study_abroad.css');
+@import url('study_abroad_services.css');
+@import url('cv.css');
+@import url('publications.css');
+
+@import url('blogs.css');
+@import url('teaching-courses.css');
+@import url('publications_journals.css');
+
