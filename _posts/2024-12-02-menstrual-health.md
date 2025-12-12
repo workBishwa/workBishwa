@@ -9,7 +9,6 @@ tags:
 ---
 
 
-
 Menstruation is a natural process and a key sign of reproductive health [^1]. The menstrual cycle in females is a naturally occurring physiological phenomenon after they reach of age. Females go through the natural phenomenon approximately **451.3 times** (median number of their lifetimes), corresponding to **34.7 years** of menstrual activity, considering an average of 13 cycles per year. The demand for effective feminine hygiene products is surging due to the increasing number of working women and changing socio-economic standards.
 
 Sanitary napkins are absorbent materials worn in underwear to absorb blood during periods. Major categories include **panty liners, tampons, menstrual cups, and feminine wipes**.
