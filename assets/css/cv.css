@@ -183,7 +183,8 @@
 }
 
 .pub-title {
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 100;
     color: #333;
     display: block; /* Ensures title wraps cleanly */
 }
