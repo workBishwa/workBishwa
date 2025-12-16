@@ -1,59 +1,77 @@
+<!-- publications-journals.html -->
 ---
 layout: page
 title: "Journal Articles"
 permalink: /publications/journals/
 ---
 
-<section class="journals-intro">
-  <h1>Journal Articles</h1>
-  <p class="intro-text">
-    A curated collection of peer-reviewed journal articles representing my ongoing 
-    contributions to research, scholarship, and evidence-based inquiry.  
-    These publications reflect work across environmental science, climate research, 
-    and interdisciplinary studies aimed at advancing knowledge and informing practice.
-  </p>
+
+<section class="pubjr-intro">
+<h1 class="pubjr-heading">Journal Articles</h1>
+<p class="pubjr-description">
+A curated collection of peer-reviewed journal articles representing my ongoing
+contributions to research, scholarship, and evidence-based inquiry. These publications
+span environmental science, climate research, and interdisciplinary studies.
+</p>
 </section>
+
 
 {% assign articles = site.categories.publications_journals | sort: "date" | reverse %}
 
-<section class="journals-list-section">
 
-  {% if articles and articles.size > 0 %}
+<section class="pubjr-section">
 
-    <div class="journal-card-container">
-      {% for post in articles %}
-        <article class="journal-card">
 
-          <a href="{{ post.url }}" class="journal-card-link" aria-label="Read more about {{ post.title }}">
+<!-- Filters -->
+<div class="pubjr-filters">
+<select data-filter="year">
+<option value="">Year</option>
+{% assign years = articles | map: 'date' | uniq %}
+{% for y in years %}
+<option value="{{ y | date: '%Y' }}">{{ y | date: "%Y" }}</option>
+{% endfor %}
+</select>
 
-            <h2 class="journal-title">{{ post.title }}</h2>
-            <h3>{{ post.journal }}</h3>
-            <h3>{{ post.authors }}</h3>
 
-            <div class="journal-meta">
-              <span class="journal-date">
-                {{ post.date | date: "%B %Y" }}
-              </span>
-            </div>
+<select data-filter="journal">
+<option value="">Journal</option>
+{% assign journals = articles | map: 'journal' | uniq %}
+{% for j in journals %}
+<option value="{{ j }}">{{ j }}</option>
+{% endfor %}
+</select>
 
-            <p class="journal-excerpt">
-              {% if post.excerpt %}
-                {{ post.excerpt | strip_html | truncatewords: 65 }}
-              {% else %}
-                Click to view abstract, full citation, and additional details.
-              {% endif %}
-            </p>
 
-          </a>
+<select data-filter="topic">
+<option value="">Topic</option>
+<option value="climate">Climate</option>
+<option value="hydrology">Hydrology</option>
+<option value="environment">Environment</option>
+</select>
+</div>
 
-        </article>
-      {% endfor %}
-    </div>
 
-  {% else %}
+{% if articles and articles.size > 0 %}
 
-    <p class="no-publications">No journal articles have been published yet.</p>
 
-  {% endif %}
+<div class="pubjr-grid">
+{% for post in articles %}
+
+
+<article class="pubjr-card {% if post.featured %}pubjr-card--featured{% endif %}">
+
+
+<h2 class="pubjr-title">{{ post.title }}</h2>
+<p class="pubjr-authors">{{ post.authors }}</p>
+<p class="pubjr-journal">{{ post.journal }}</p>
+
+
+<div class="pubjr-meta">
+<span>{{ post.date | date: "%Y" }}</span>
+{% if post.citations %}
+<span class="pubjr-citations">★ {{ post.citations }} citations</span>
+{% endif %}
+</div>
+
 
 </section>
