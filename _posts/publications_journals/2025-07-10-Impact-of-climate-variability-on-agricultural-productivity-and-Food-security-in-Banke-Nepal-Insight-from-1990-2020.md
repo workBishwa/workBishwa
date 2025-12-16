@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Impact of Climate Variability on Agricultural Productivity and Food Securityin Banke, Nepal: Insights from 1990-2020"
 collection: publications
 categories: publications publications_journals manuscripts
@@ -7,11 +8,15 @@ excerpt: 'Nepal’s climate diversity presents complex challenges for its agrari
 date: 2025-04-14
 venue: 'Journal of Environmental Science and Agricultural Research'
 paperurl: 'https://doi.org/10.61440/JESAR.2025.v3.51'
+doi: '10.61440/JESAR.2025.v3.51'
+pdf: 'https://oaskpublishers.com/assets/article-pdf/impact-of-climate-variability-on-agricultural-productivity-and-food-security--in-banke-nepal-insights-from-1990-2020.pdf'
 citation: 'Rasila Gautam, Bishwa Prakash Puri, Madan Sigdel, Hari Dahal. Impact of Climate Variability on Agricultural Productivity and Food Security in Banke,Nepal: Insights from 1990-2020. J Envi Sci Agri Res. 2025. 3(2): 1-10. DOI: doi.org/10.61440/JESAR.2025.v3.51'
+authors: 'Rasila Gautam, Bishwa Prakash Puri, Madan Sigdel, Hari Dahal'
+featured: true
 
 ---
 
-## 🌿 Title: How Climate Change is Quietly Reshaping Agriculture in Banke, Nepal
+# 🌿 Title: How Climate Change is Quietly Reshaping Agriculture in Banke, Nepal
 
 - By Bishwa Prakash Puri - [**Read full paper:** 📖](https://oaskpublishers.com/assets/article-pdf/impact-of-climate-variability-on-agricultural-productivity-and-food-security--in-banke-nepal-insights-from-1990-2020.pdf)
 
