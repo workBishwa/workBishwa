@@ -1,0 +1,93 @@
+/* ==========================
+   Contact Page – Academic UI
+========================== */
+
+.ct-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-family: "Inter", "Georgia", serif;
+}
+
+.ct-header {
+  margin-bottom: 3rem;
+}
+
+.ct-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.ct-description {
+  max-width: 720px;
+  color: #555;
+}
+
+/* Social Grid */
+.ct-social {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.ct-card {
+  border: 1px solid #eee;
+  padding: 1.8rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ct-card__title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.ct-card__text {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.ct-btn {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+  transition: background 0.2s ease;
+}
+
+/* Platform Colors (Muted Academic Style) */
+.ct-btn--x {
+  background: #111;
+  color: #fff;
+}
+
+.ct-btn--facebook {
+  background: #1877f2;
+  color: #fff;
+}
+
+.ct-btn--linkedin {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.ct-btn--instagram {
+  background: #c13584;
+  color: #fff;
+}
+
+.ct-btn--youtube {
+  background: #cc0000;
+  color: #fff;
+}
+
+.ct-btn:hover {
+  opacity: 0.9;
+}
