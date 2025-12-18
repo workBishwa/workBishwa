@@ -1,112 +1,298 @@
-/* assets/css/footer.css - Footer Styles (No Variables) */
+/* =========================================================
+   JK FOOTER — FULLY SCOPED, CONFLICT-SAFE
+   ========================================================= */
 
-/* Main Footer */
+/* Root footer */
 .jk-footer {
-  background: rgba(255, 0, 0, 0.15);
-  border-top: 10px solid rgba(255, 0, 0, 0.27);
-  padding: 64px 0 32px;
-  margin-top: 64px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #dddddd;
+  margin-top: 72px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #333333;
 }
 
-.jk-footer-content {
+/* Inner layout */
+.jk-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 24px 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 48px;
-  margin-bottom: 48px;
 }
 
-.jk-footer-section h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #1a1a1a;
-}
-
-.jk-footer-links {
-  list-style: none;
+/* Footer blocks */
+.jk-footer-block {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 0;
+  gap: 14px;
+}
+
+/* Headings */
+.jk-footer-heading {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin: 0 0 8px;
+  color: #111111;
+}
+
+/* Text */
+.jk-footer-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555555;
+  max-width: 420px;
+}
+
+/* Contact links */
+.jk-footer-contact {
   margin: 0;
 }
 
-.jk-footer-link {
-  color: #4a4a4a;
+.jk-footer-contact-link {
+  font-size: 0.95rem;
+  color: #1a1a1a;
   text-decoration: none;
-  transition: all 0.25s ease;
-  display: inline-block;
 }
 
-.jk-footer-link:hover {
-  color: #e63946;
-  padding-left: 6px;
+.jk-footer-contact-link:hover {
+  text-decoration: underline;
 }
 
-/* Footer Bottom */
-.jk-footer-bottom {
-  padding-top: 32px;
-  border-top: 1px solid #d1d1d1;
+/* =========================================================
+   QUICK LINKS — INLINE, WRAPPING
+   ========================================================= */
+.jk-footer-nav {
+  width: 100%;
+}
+
+.jk-footer-nav-inline {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
-}
+  align-items: center;
+  gap: 14px 18px;
 
-.jk-footer-copyright {
-  color: #666666;
-  font-size: 0.875rem;
-}
-
-.jk-footer-social {
-  display: flex;
-  gap: 20px;
+  /* Hard reset against theme styles */
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.jk-footer-social-link {
-  display: flex;
+.jk-footer-nav-inline a.jk-footer-link {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #e6e6e6;
-  color: #4a4a4a;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+  color: #333333;
   text-decoration: none;
+  white-space: nowrap;
+
+  background-color: #e9e9e9;
+  border: 1px solid #dddddd;
+
   transition: all 0.25s ease;
 }
 
-.jk-footer-social-link:hover {
-  background: #e63946;
+.jk-footer-nav-inline a.jk-footer-link:hover {
+  background-color: #000000;
   color: #ffffff;
-  transform: translateY(-2px);
+  border-color: #000000;
+  transform: translateY(-1px);
 }
 
-/* Simple Footer */
-.jk-footer-simple {
-  background: #f2f2f2;
-  border-top: 1px solid #d1d1d1;
-  padding: 32px 0;
-  margin-top: 64px;
-  text-align: center;
+/* =========================================================
+   SOCIAL ICONS
+   ========================================================= */
+/* =========================================================
+   SOCIAL ICONS — BRAND HOVER WITH LABEL
+   ========================================================= */
+
+.jk-footer-social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
-.jk-footer-simple p {
-  color: #666666;
-  font-size: 0.9375rem;
-  margin-bottom: 12px;
-}
+/* Base icon button */
+.jk-footer-icon {
+  position: relative;
 
-.jk-footer-simple a {
-  color: #e63946;
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: #e6e6e6;
+
   text-decoration: none;
-  font-weight: 600;
+  color: #111111;
+
+  transition: 
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.jk-footer-simple a:hover {
-  text-decoration: underline;
+/* SVG */
+.jk-footer-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+/* Hover motion */
+.jk-footer-icon:hover {
+  transform: translateY(-2px) scale(1.06);
+}
+
+/* Label (hidden by default) */
+.jk-footer-icon-label {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+
+  padding: 4px 10px;
+  border-radius: 999px;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+
+  color: #ffffff;
+  background-color: #000000;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Show label on hover */
+.jk-footer-icon:hover .jk-footer-icon-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
+/* X */
+.jk-footer-icon-x:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.jk-footer-icon-x .jk-footer-icon-label {
+  background-color: #000000;
+}
+
+/* LinkedIn */
+.jk-footer-icon-linkedin:hover {
+  background-color: #0a66c2;
+  color: #ffffff;
+}
+.jk-footer-icon-linkedin .jk-footer-icon-label {
+  background-color: #0a66c2;
+}
+
+/* Facebook */
+.jk-footer-icon-facebook:hover {
+  background-color: #1877f2;
+  color: #ffffff;
+}
+.jk-footer-icon-facebook .jk-footer-icon-label {
+  background-color: #1877f2;
+}
+
+/* Instagram */
+.jk-footer-icon-instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+  color: #ffffff;
+}
+.jk-footer-icon-instagram .jk-footer-icon-label {
+  background-color: #dd2a7b;
+}
+
+/* TikTok */
+.jk-footer-icon-tiktok:hover {
+  background-color: #000000;
+  color: #25f4ee;
+}
+.jk-footer-icon-tiktok .jk-footer-icon-label {
+  background-color: #000000;
+}
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.jk-footer-bottom {
+  border-top: 1px solid #dddddd;
+  padding: 20px 24px 28px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.jk-footer-bottom-text {
+  font-size: 0.85rem;
+  color: #666666;
+  margin: 0 0 6px;
+}
+
+.jk-footer-bottom-quote {
+  font-size: 0.85rem;
+  color: #888888;
+  margin: 0;
+  font-style: italic;
+}
+
+/* =========================================================
+   SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .jk-footer-inner {
+    padding: 40px 20px 32px;
+    gap: 36px;
+  }
+
+  .jk-footer-heading {
+    font-size: 1rem;
+  }
+
+  .jk-footer-text,
+  .jk-footer-link,
+  .jk-footer-contact-link {
+    font-size: 0.9rem;
+  }
+
+  .jk-footer-social-icons {
+    gap: 14px;
+  }
+
+  .jk-footer-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .jk-footer-icon svg {
+    width: 17px;
+    height: 17px;
+  }
 }

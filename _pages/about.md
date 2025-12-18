@@ -17,7 +17,7 @@ Hello! I'm **Bishwa Prakash Puri**, and I am thrilled to have you here! 🌎✨
 
 I'm open to **consulting**, **collaborating**, and **partnering** on projects that matter to you.  
 If you're looking to build sustainable solutions and meaningful results, let's connect.  
-📩 **work.bishwapuri@gmail.com**
+📩 **work.bishwapuri@gmail.com**, **Phone: +977-9843314630**.
 
 <!-- Promotional Section for Abroad Study Solution -->
 <div class="study-abroad-promo">
