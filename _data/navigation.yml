@@ -1,22 +1,18 @@
 # =========================
-# Main Navigation
+# Main Navigation (Re-arranged only)
 # =========================
 main:
   - title: "Services"
-    url: /services/
+    url: /portfolio/
     children:
-      - title: "Research & Data Analysis"
-        url: /services/research/
-      - title: "Reports & Policy Briefs"
-        url: /services/reports/
-      - title: "Environmental Impact Assessment (EIA/IEE)"
-        url: /services/eia/
-      - title: "Monitoring & Evaluation (M&E)"
-        url: /services/me/
-      - title: "Business Development & Strategy"
-        url: /services/business-development/
-      - title: "Marketing & Communication"
-        url: /services/marketing/
+      - title: "Business Development"
+        url: /portfolio/business/
+      - title: "Environment Solutions"
+        url: /portfolio/environment/
+      - title: "Consulting Projects"
+        url: /portfolio/consulting/
+      - title: "Research Services"
+        url: /study-abroad/services/
 
   - title: "Study Abroad"
     url: /study-abroad/
@@ -30,19 +26,7 @@ main:
       - title: "Packages & Fees"
         url: /study-abroad/packages/
 
-  - title: "Research"
-    url: /research/
-    children:
-      - title: "Research Areas"
-        url: /research/areas/
-      - title: "Methods & Tools"
-        url: /research/methods/
-      - title: "Data & Models"
-        url: /research/data/
-      - title: "Funded Research"
-        url: /research/funded/
-
-  - title: "Publications"
+  - title: "Research & Publications"
     url: /publications/
     children:
       - title: "Journal Articles"
@@ -53,6 +37,8 @@ main:
         url: /publications/reports/
       - title: "Books & Chapters"
         url: /publications/books/
+      - title: "Funded Research"
+        url: /projects/funded/
 
   - title: "Projects"
     url: /projects/
@@ -61,29 +47,29 @@ main:
         url: /projects/active/
       - title: "Completed Projects"
         url: /projects/completed/
-      - title: "Funded Projects"
-        url: /projects/funded/
-      - title: "Case Studies"
-        url: /projects/case-studies/
+      - title: "Consulting Projects"
+        url: /portfolio/consulting/
 
   - title: "Teaching & Talks"
-    url: /engagement/
+    url: /teaching/
     children:
       - title: "Courses"
-        url: /engagement/courses/
-      - title: "Supervision"
-        url: /engagement/supervision/
+        url: /teaching/courses/
+      - title: "Syllabi"
+        url: /teaching/syllabi/
+      - title: "Supervision (Masters/PhD)"
+        url: /teaching/supervision/
       - title: "Workshops"
-        url: /engagement/workshops/
+        url: /talks/workshops/
       - title: "Guest Lectures"
-        url: /engagement/lectures/
+        url: /talks/lectures/
       - title: "Media & Podcasts"
-        url: /engagement/media/
+        url: /talks/media/
 
   - title: "Blog"
     url: /blog/
     children:
-      - title: "Study Abroad"
+      - title: "Abroad Studies"
         url: /blog/study-abroad/
       - title: "Career & Coaching"
         url: /blog/career/
@@ -92,11 +78,12 @@ main:
       - title: "Sustainable Development"
         url: /blog/sustainability/
 
-  - title: "More"
-    url: /#
+  - title: "About"
+    url: /cv/
     children:
-      - title: "About"
-        url: /about/
+      - title: "CV"
+        url: /cv/
+      - title: "Creative Writing"
+        url: /portfolio/writing/
       - title: "Contact"
         url: /contact/
-
