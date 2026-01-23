@@ -4,23 +4,112 @@ title: "Business Development"
 permalink: /portfolio/business/
 ---
 
-<h1>Business Development</h1>
-<p>Business development projects and initiatives.</p>
+<section class="content-page">
 
-{% if site.categories.portfolio_business.size > 0 %}
-<ul class="portfolio-list">
-  {% for post in site.categories.portfolio_business %}
-    <li class="portfolio-item">
-      <a href="{{ post.url }}" class="portfolio-link">
-        <h3>{{ post.title }}</h3>
-        <span class="portfolio-date">{{ post.date | date: "%B %d, %Y" }}</span>
-      </a>
-      {% if post.excerpt %}
-        <p class="portfolio-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
-{% else %}
-<p>No business development projects listed yet.</p>
-{% endif %}
+  <header class="content-page__header">
+    <h1 class="content-page__title">Business Development</h1>
+    <p class="content-page__description">
+      I support organizations, startups, NGOs, and academic institutions by integrating
+      strategy, research, and implementation to design, scale, and sustain high-impact
+      initiatives.
+    </p>
+  </header>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Scope of Work</h2>
+    <ul class="content-page__list">
+      <li>Market assessment and feasibility studies</li>
+      <li>Strategic planning and organizational growth frameworks</li>
+      <li>Proposal writing and concept note development</li>
+      <li>Grant writing and donor engagement support</li>
+      <li>Public–private partnership (PPP) facilitation</li>
+      <li>Research-informed business and policy advisory</li>
+    </ul>
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Approach & Methodology</h2>
+    <p class="content-page__text">
+      My work follows a structured, evidence-based process that prioritizes clarity,
+      feasibility, and long-term institutional impact.
+    </p>
+    <ol class="content-page__steps">
+      <li>
+        <strong>Problem definition</strong> – identifying strategic, institutional,
+        and market-level gaps
+      </li>
+      <li>
+        <strong>Data and stakeholder analysis</strong> – combining qualitative insights
+        with quantitative evidence
+      </li>
+      <li>
+        <strong>Strategy development</strong> – designing practical, scalable solutions
+      </li>
+      <li>
+        <strong>Implementation support</strong> – guidance on execution, documentation,
+        and monitoring
+      </li>
+    </ol>
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Tools & Expertise</h2>
+    <ul class="content-page__list">
+      <li>Market, policy, and institutional analysis</li>
+      <li>Financial appraisal and investment assessment</li>
+      <li>Impact indicators and performance measurement</li>
+      <li>Python-based data analysis and visualization</li>
+      <li>GIS and spatial decision-support systems</li>
+    </ul>
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Selected Projects</h2>
+
+    {% if site.categories.portfolio_business.size > 0 %}
+    <ul class="content-page__items">
+      {% for post in site.categories.portfolio_business %}
+        <li class="content-page__item">
+          <a href="{{ post.url }}" class="content-page__link">
+            <h3 class="content-page__item-title">{{ post.title }}</h3>
+            <span class="content-page__meta">
+              {{ post.date | date: "%B %d, %Y" }}
+            </span>
+          </a>
+
+          {% if post.excerpt %}
+            <p class="content-page__excerpt">
+              {{ post.excerpt | strip_html | truncatewords: 35 }}
+            </p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p class="content-page__empty">
+        No business development projects are currently listed.
+      </p>
+    {% endif %}
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__cta">
+    <h2 class="content-page__heading">Collaboration & Consulting</h2>
+    <p class="content-page__text">
+      I welcome collaboration with organizations, research institutions, startups,
+      and development partners on strategic planning, proposal development, and
+      growth-oriented initiatives.
+    </p>
+    <a href="/contact/" class="content-page__button">Get in Touch</a>
+  </section>
+
+</section>
