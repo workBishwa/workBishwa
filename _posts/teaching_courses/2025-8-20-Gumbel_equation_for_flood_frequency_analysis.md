@@ -34,11 +34,16 @@ This distribution plays a critical role in risk management and design standards,
 
 ### Maximum Series
 
-     $$M_n = \max\{X_1, X_2, \ldots, X_n\}$$
+$$
+M_n = \max\{X_1, X_2, \ldots, X_n\}
+$$
 
 ### Gumbel Equation
 
-     $$X_T = \bar{x} + K\sigma_{n-1}$$
+$$
+X_T = \bar{x} + K\sigma_{n-1}
+$$
+
 
 Where:
 
