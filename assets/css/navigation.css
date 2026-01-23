@@ -178,8 +178,13 @@
 
 /* --- MOBILE STYLES (Max width 992px) --- */
 @media (max-width: 992px) {
+  .jk-navbar-container {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  
   .jk-navbar-toggle {
-    display: flex;
+    margin-left: auto;
   }
 
   /* Overlay Dimmer */
