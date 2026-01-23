@@ -1,6 +1,6 @@
 /* --- RESET & BASICS --- */
 * {
-  box-sizing: border-box; /* Prevents padding from breaking widths */
+  box-sizing: border-box;
 }
 
 /* Base Navbar */
@@ -35,7 +35,7 @@
 
 /* --- TOGGLE BUTTON (Mobile) --- */
 .jk-navbar-toggle {
-  display: none; /* Hidden on desktop */
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -43,7 +43,7 @@
   border: none;
   cursor: pointer;
   padding: 10px;
-  z-index: 1002; /* Above menu and overlay */
+  z-index: 1002;
 }
 
 .jk-navbar-toggle-bar {
@@ -89,9 +89,10 @@
   padding: 10px 0;
   display: flex;
   align-items: center;
-  gap: 5px; /* Space between text and arrow */
+  gap: 5px;
   transition: color 0.3s ease;
   cursor: pointer;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .jk-navbar-link:hover {
@@ -106,58 +107,69 @@
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #333;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border-top-color 0.3s ease;
+}
+
+.jk-navbar-link:hover .arrow {
+  border-top-color: #0077cc;
 }
 
 .jk-navbar-item:hover .arrow {
   transform: rotate(180deg);
-  border-top-color: #0077cc;
 }
 
+/* --- DROPDOWN MENU --- */
 .jk-dropdown-menu {
   position: absolute;
   top: 100%;
-  right: 0;       /* Fix: align to the right of parent */
-  left: auto;     /* Prevent conflict */
-
+  left: 50%; /* Center under parent */
+  transform: translateX(-50%) translateY(10px); /* Center horizontally, offset vertically */
+  
   background: #fff;
   border: 1px solid #eee;
-  min-width: 200px;
+  min-width: 220px;
   list-style: none;
   padding: 10px 0;
   margin: 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   border-radius: 8px;
 
-  /* Hide animation */
+  /* Hide by default */
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.2s ease;
+  pointer-events: none; /* Prevent interaction when hidden */
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
   z-index: 1100;
 }
 
-/* FIX: The Invisible Bridge 
-   This pseudo-element fills the gap between the link and the menu
-   so the mouse doesn't "fall through".
+/* Alternative: Left-align dropdowns (uncomment if preferred) */
+/*
+.jk-dropdown-menu {
+  left: 0;
+  right: auto;
+  transform: translateY(10px);
+}
 */
+
+/* Invisible bridge for smooth hover */
 .jk-dropdown-menu::before {
   content: "";
   position: absolute;
-  top: -20px; /* Extends upwards to meet the navbar */
+  top: -10px;
   left: 0;
   width: 100%;
-  height: 20px; 
+  height: 10px;
   background: transparent;
 }
 
 .jk-dropdown-link {
   text-align: left;
   display: block;
-  padding: 10px 20px;
+  padding: 12px 20px;
   color: #444;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
 }
 
 .jk-dropdown-link:hover {
@@ -165,14 +177,13 @@
   color: #0077cc;
 }
 
-
-
 /* Show dropdown on hover (Desktop only) */
 @media (min-width: 993px) {
   .jk-navbar-item:hover .jk-dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0); /* Remove offset on show */
   }
 }
 
@@ -191,13 +202,17 @@
   /* Overlay Dimmer */
   .jk-navbar-overlay {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(0,0,0,0.5);
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 1000;
   }
+  
   .jk-navbar-overlay.active {
     opacity: 1;
     visibility: visible;
@@ -207,17 +222,20 @@
   .jk-navbar-menu {
     position: fixed;
     top: 0;
-    right: -100%; /* Hide off screen */
-    width: 280px; /* Fixed width prevents layout break */
-    height: 100vh; /* Full height */
+    right: -100%;
+    width: 280px;
+    max-width: 85vw; /* Responsive width for small screens */
+    height: 100vh;
     background: #fff;
     flex-direction: column;
-    align-items: flex-start; /* Left align text */
+    align-items: flex-start;
     gap: 0;
-    padding-top: 80px; /* Space for close button */
+    padding-top: 80px;
+    padding-bottom: 20px;
     transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1001;
-    overflow-y: auto; /* IMPORTANT: Enables scrolling within menu */
+    overflow-y: auto;
+    overflow-x: hidden;
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
   }
 
@@ -228,7 +246,7 @@
   .jk-navbar-item {
     width: 100%;
     height: auto;
-    flex-direction: column; /* Stack link and dropdown vertically */
+    flex-direction: column;
     align-items: flex-start;
     border-bottom: 1px solid #f0f0f0;
   }
@@ -236,34 +254,34 @@
   .jk-navbar-link {
     width: 100%;
     padding: 15px 20px;
-    justify-content: space-between; /* Push arrow to right */
+    justify-content: space-between;
     font-size: 1.1rem;
   }
 
   /* Mobile Dropdown (Accordion Style) */
   .jk-dropdown-menu {
-    position: static; /* No absolute positioning on mobile */
+    position: static;
     opacity: 1;
     visibility: visible;
     transform: none;
+    pointer-events: auto;
     box-shadow: none;
     border: none;
     background: #f9f9f9;
     width: 100%;
     padding: 0;
-    
-    /* Collapsed by default */
-    display: none; 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
   
   .jk-dropdown-menu::before {
-    display: none; /* Remove bridge on mobile */
+    display: none;
   }
 
-  /* Open state controlled by JS */
+  /* Open state */
   .jk-navbar-item.open .jk-dropdown-menu {
-    display: block;
-    animation: slideDown 0.3s ease;
+    max-height: 500px; /* Adjust based on content */
   }
   
   .jk-navbar-item.open .arrow {
@@ -271,11 +289,19 @@
   }
 
   .jk-dropdown-link {
-    padding-left: 40px; /* Indent sub-items */
+    padding: 12px 20px 12px 40px;
+    font-size: 1rem;
   }
 }
 
+/* Animation for mobile dropdown */
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
