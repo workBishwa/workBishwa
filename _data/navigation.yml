@@ -12,7 +12,7 @@ main:
       - title: "Consulting Projects"
         url: /portfolio/consulting/
       - title: "Research Services"
-        url: /study-abroad/services/
+        url: /services/research/
 
   - title: "Study Abroad"
     url: /study-abroad/

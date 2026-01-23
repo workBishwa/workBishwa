@@ -1,0 +1,110 @@
+---
+layout: page
+title: "Research & Data Analysis"
+permalink: /services/research/
+---
+
+<section class="content-page">
+
+  <header class="content-page__header">
+    <h1 class="content-page__title">Research & Data Analysis</h1>
+    <p class="content-page__description">
+      I provide research, data analysis, and evidence-based insights to support
+      policy, business, and environmental decision-making.
+    </p>
+  </header>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Scope of Services</h2>
+    <ul class="content-page__list">
+      <li>Policy and market research</li>
+      <li>Data collection, cleaning, and processing</li>
+      <li>Statistical and econometric analysis</li>
+      <li>Spatial and GIS analysis</li>
+      <li>Python-based data modeling and visualization</li>
+      <li>Report writing and policy recommendations</li>
+    </ul>
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Methodology</h2>
+    <p class="content-page__text">
+      Research projects follow a structured, reproducible workflow that ensures
+      data integrity, analytical rigor, and actionable insights.
+    </p>
+    <ol class="content-page__steps">
+      <li>
+        <strong>Problem framing</strong> – define research questions and objectives
+      </li>
+      <li>
+        <strong>Data collection & validation</strong> – surveys, secondary data, and stakeholder inputs
+      </li>
+      <li>
+        <strong>Analysis & modeling</strong> – statistical, econometric, and spatial techniques
+      </li>
+      <li>
+        <strong>Reporting & recommendations</strong> – clear, actionable findings for decision-making
+      </li>
+    </ol>
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Tools & Expertise</h2>
+    <ul class="content-page__list">
+      <li>Python (Pandas, NumPy, Matplotlib, Seaborn, GeoPandas)</li>
+      <li>R and statistical modeling</li>
+      <li>GIS and spatial analysis tools (QGIS, ArcGIS)</li>
+      <li>Survey design and data collection platforms</li>
+      <li>Policy analysis and research reporting</li>
+    </ul>
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Selected Research Projects</h2>
+
+    {% if site.categories.services_research.size > 0 %}
+    <ul class="content-page__items">
+      {% for post in site.categories.services_research %}
+        <li class="content-page__item">
+          <a href="{{ post.url }}" class="content-page__link">
+            <h3 class="content-page__item-title">{{ post.title }}</h3>
+            <span class="content-page__meta">
+              {{ post.date | date: "%B %d, %Y" }}
+            </span>
+          </a>
+
+          {% if post.excerpt %}
+            <p class="content-page__excerpt">
+              {{ post.excerpt | strip_html | truncatewords: 35 }}
+            </p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p class="content-page__empty">
+        No research projects listed yet.
+      </p>
+    {% endif %}
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__cta">
+    <h2 class="content-page__heading">Collaboration & Consulting</h2>
+    <p class="content-page__text">
+      I welcome collaboration with academic institutions, NGOs, government agencies,
+      and private sector partners for research, data analysis, and policy advisory.
+    </p>
+    <a href="/contact/" class="content-page__button">Get in Touch</a>
+  </section>
+
+</section>
