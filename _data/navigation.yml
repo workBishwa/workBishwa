@@ -92,11 +92,11 @@ main:
       - title: "Sustainable Development"
         url: /blog/sustainability/
 
-  - title: "CV"
-    url: /cv/
+  - title: "More"
+    url: /#
+    children:
+      - title: "About"
+        url: /about/
+      - title: "Contact"
+        url: /contact/
 
-  - title: "About"
-    url: /about/
-
-  - title: "Contact"
-    url: /contact/
