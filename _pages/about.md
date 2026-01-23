@@ -22,7 +22,7 @@ If you're looking to build sustainable solutions and meaningful results, let's c
 <!-- Promotional Section for Abroad Study Solution -->
 <div class="study-abroad-promo">
   <h2>Unlock Your Global Education Journey!</h2>
-  <p>Ready to study abroad? Discover expert guidance and personalized solutions to make your international education dreams a reality. From choosing the right university to navigating visa processes, our <strong>Abroad Study Team</strong> has you covered. Start your adventure today!</p>
+  <p>Ready to study abroad? Discover expert guidance and personalized solutions to make your international education dreams a reality. From choosing the right university to navigating visa processes, my <strong>Abroad Study Team</strong> has you covered. Start your adventure today!</p>
   <a href="" class="btn btn--primary" target="_blank">Explore Abroad Study Solutions</a>
 </div>
 
