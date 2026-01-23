@@ -4,23 +4,109 @@ title: "Environment Solutions"
 permalink: /portfolio/environment/
 ---
 
-<h1>Environment Solutions</h1>
-<p>Projects focused on environmental sustainability and solutions.</p>
+<section class="content-page">
 
-{% if site.categories.portfolio_environment.size > 0 %}
-<ul class="portfolio-list">
-  {% for post in site.categories.portfolio_environment %}
-    <li class="portfolio-item">
-      <a href="{{ post.url }}" class="portfolio-link">
-        <h3>{{ post.title }}</h3>
-        <span class="portfolio-date">{{ post.date | date: "%B %d, %Y" }}</span>
-      </a>
-      {% if post.excerpt %}
-        <p class="portfolio-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
-{% else %}
-<p>No environment projects listed yet.</p>
-{% endif %}
+  <header class="content-page__header">
+    <h1 class="content-page__title">Environment Solutions</h1>
+    <p class="content-page__description">
+      I work on evidence-based environmental solutions that support sustainable
+      development, climate resilience, and responsible natural resource management
+      across policy, project, and community levels.
+    </p>
+  </header>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Scope of Work</h2>
+    <ul class="content-page__list">
+      <li>Environmental Impact Assessment (EIA) and Initial Environmental Examination (IEE)</li>
+      <li>Climate change adaptation and mitigation planning</li>
+      <li>Hydrology, water resources, and watershed analysis</li>
+      <li>Environmental monitoring and compliance reporting</li>
+      <li>Sustainability indicators and impact assessment</li>
+      <li>Policy analysis and environmental planning support</li>
+    </ul>
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Approach & Methodology</h2>
+    <p class="content-page__text">
+      Each project follows a structured, science-driven methodology that integrates
+      field data, spatial analysis, and policy frameworks.
+    </p>
+    <ol class="content-page__steps">
+      <li>
+        <strong>Baseline assessment</strong> – environmental, social, and climatic context analysis
+      </li>
+      <li>
+        <strong>Data collection & modeling</strong> – field surveys, secondary data, and spatial tools
+      </li>
+      <li>
+        <strong>Impact analysis</strong> – identifying risks, thresholds, and mitigation measures
+      </li>
+      <li>
+        <strong>Monitoring & reporting</strong> – indicators, compliance tracking, and adaptive feedback
+      </li>
+    </ol>
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Tools & Expertise</h2>
+    <ul class="content-page__list">
+      <li>Environmental baseline surveys and impact matrices</li>
+      <li>GIS and remote sensing analysis</li>
+      <li>Hydrological and climate data analysis</li>
+      <li>Python-based environmental data processing</li>
+      <li>Monitoring frameworks and reporting tools</li>
+    </ul>
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__section">
+    <h2 class="content-page__heading">Selected Projects</h2>
+
+    {% if site.categories.portfolio_environment.size > 0 %}
+    <ul class="content-page__items">
+      {% for post in site.categories.portfolio_environment %}
+        <li class="content-page__item">
+          <a href="{{ post.url }}" class="content-page__link">
+            <h3 class="content-page__item-title">{{ post.title }}</h3>
+            <span class="content-page__meta">
+              {{ post.date | date: "%B %d, %Y" }}
+            </span>
+          </a>
+
+          {% if post.excerpt %}
+            <p class="content-page__excerpt">
+              {{ post.excerpt | strip_html | truncatewords: 35 }}
+            </p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p class="content-page__empty">
+        No environmental projects are currently listed.
+      </p>
+    {% endif %}
+  </section>
+
+  <hr class="content-page__divider">
+
+  <section class="content-page__cta">
+    <h2 class="content-page__heading">Collaboration & Consulting</h2>
+    <p class="content-page__text">
+      I collaborate with governments, development partners, NGOs, and research
+      institutions on environmental assessments, sustainability planning, and
+      climate-resilient solutions.
+    </p>
+    <a href="/contact/" class="content-page__button">Get in Touch</a>
+  </section>
+
+</section>

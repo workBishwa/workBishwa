@@ -1,0 +1,117 @@
+/* =======================
+   Content Page Layout
+   Applies to portfolio/service pages
+   ======================= */
+
+.content-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.content-page__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content-page__title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-page__description {
+  font-size: 1.05rem;
+  color: #555;
+}
+
+.content-page__divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}
+
+.content-page__section {
+  margin-bottom: 2rem;
+}
+
+.content-page__heading {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.content-page__text {
+  margin-bottom: 1rem;
+}
+
+.content-page__list,
+.content-page__steps {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.content-page__list li,
+.content-page__steps li {
+  margin-bottom: 0.5rem;
+}
+
+.content-page__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-page__item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.content-page__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content-page__item-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.content-page__meta {
+  display: block;
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 0.25rem;
+}
+
+.content-page__excerpt {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.content-page__empty {
+  font-style: italic;
+  color: #999;
+}
+
+.content-page__cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.content-page__button {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  background-color: #0a7c6f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.content-page__button:hover {
+  background-color: #075748;
+}
