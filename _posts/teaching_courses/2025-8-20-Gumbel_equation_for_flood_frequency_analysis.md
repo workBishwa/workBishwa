@@ -33,13 +33,12 @@ This distribution plays a critical role in risk management and design standards,
    $$T = \frac{1}{P}$$  
 
 ### Maximum Series
-
-$$
-M_n = \max\{X_1, X_2, \ldots, X_n\}
-$$
+$$M_n = \max\{X_1, X_2, \ldots, X_n\}$$
 
 ### Gumbel Equation
+$$X_T= \bar{x} + K\sigma_{n-1}$$
 
+Where:
 $$
 X_T = \bar{x} + K\sigma_{n-1}
 $$
@@ -68,7 +67,8 @@ Where:
 
 ### Yn and Sn in Gumbel's Extreme Value Distribution
 
-![Yn and Sn in Gumbel's Extreme Value Distribution](https://workbishwa.github.io/imBishwa/assets/images/Yn_Sn_value_for_gumbel_distribution.png)
+![Yn and Sn in Gumbel's Extreme Value Distribution]({{ "/assets/images/Yn_Sn_value_for_gumbel_distribution.png" | relative_url }})
+
 
 [View Template excel sheet for Gumbel calculation in Google Docs](/files/gumbel_calculation_template.xlsx)
 
