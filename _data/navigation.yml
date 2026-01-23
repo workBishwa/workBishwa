@@ -1,4 +1,23 @@
+# =========================
+# Main Navigation
+# =========================
 main:
+  - title: "Services"
+    url: /services/
+    children:
+      - title: "Research & Data Analysis"
+        url: /services/research/
+      - title: "Reports & Policy Briefs"
+        url: /services/reports/
+      - title: "Environmental Impact Assessment (EIA/IEE)"
+        url: /services/eia/
+      - title: "Monitoring & Evaluation (M&E)"
+        url: /services/me/
+      - title: "Business Development & Strategy"
+        url: /services/business-development/
+      - title: "Marketing & Communication"
+        url: /services/marketing/
+
   - title: "Study Abroad"
     url: /study-abroad/
     children:
@@ -10,6 +29,18 @@ main:
         url: /study-abroad/scholarships/
       - title: "Packages & Fees"
         url: /study-abroad/packages/
+
+  - title: "Research"
+    url: /research/
+    children:
+      - title: "Research Areas"
+        url: /research/areas/
+      - title: "Methods & Tools"
+        url: /research/methods/
+      - title: "Data & Models"
+        url: /research/data/
+      - title: "Funded Research"
+        url: /research/funded/
 
   - title: "Publications"
     url: /publications/
@@ -23,42 +54,36 @@ main:
       - title: "Books & Chapters"
         url: /publications/books/
 
-  - title: "Talks"
-    url: /talks/
+  - title: "Projects"
+    url: /projects/
     children:
-      - title: "Workshops"
-        url: /talks/workshops/
-      - title: "Guest Lectures"
-        url: /talks/lectures/
-      - title: "Media & Podcasts"
-        url: /talks/media/
+      - title: "Active Projects"
+        url: /projects/active/
+      - title: "Completed Projects"
+        url: /projects/completed/
+      - title: "Funded Projects"
+        url: /projects/funded/
+      - title: "Case Studies"
+        url: /projects/case-studies/
 
-  - title: "Teaching"
-    url: /teaching/
+  - title: "Teaching & Talks"
+    url: /engagement/
     children:
       - title: "Courses"
-        url: /teaching/courses/
-      - title: "Syllabi"
-        url: /teaching/syllabi/
-      - title: "Supervision (Masters/PhD)"
-        url: /teaching/supervision/
+        url: /engagement/courses/
+      - title: "Supervision"
+        url: /engagement/supervision/
+      - title: "Workshops"
+        url: /engagement/workshops/
+      - title: "Guest Lectures"
+        url: /engagement/lectures/
+      - title: "Media & Podcasts"
+        url: /engagement/media/
 
-  - title: "Portfolio"
-    url: /portfolio/
-    children:
-      - title: "Business Development"
-        url: /portfolio/business/
-      - title: "Environment Solutions"
-        url: /portfolio/environment/
-      - title: "Consulting Projects"
-        url: /portfolio/consulting/
-      - title: "Creative Writing"
-        url: /portfolio/writing/
-
-  - title: "Blog Posts"
+  - title: "Blog"
     url: /blog/
     children:
-      - title: "Abroad Studies"
+      - title: "Study Abroad"
         url: /blog/study-abroad/
       - title: "Career & Coaching"
         url: /blog/career/
@@ -70,12 +95,8 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Projects"
-    url: /projects/
-    children:
-      - title: "Active Projects"
-        url: /projects/active/
-      - title: "Completed Projects"
-        url: /projects/completed/
-      - title: "Funded Research"
-        url: /projects/funded/
+  - title: "About"
+    url: /about/
+
+  - title: "Contact"
+    url: /contact/
