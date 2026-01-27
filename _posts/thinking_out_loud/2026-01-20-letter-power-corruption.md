@@ -2,7 +2,9 @@
 layout: post
 title: "Message to All the People Who Are Treated Like Bugs"
 date: 2026-01-27
-category: thinking-out-loud
+category: thinking_out_loud
+categories: thinking_out_loud
+permalink: /blog/thinking-out-loud/letter-power-corruption
 tags: [philosophy, power, democracy, corruption, freedom]
 author: IamNobody
 ---
