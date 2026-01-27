@@ -1,82 +1,120 @@
-/* Opening section */
-.thinking-opening {
-  max-width: 780px;
-  margin-bottom: 3rem;
-  padding: 2.5rem;
-  background: linear-gradient(to right, #f9fafb, #ffffff);
-  border-radius: 14px;
-  border-left: 6px solid #1f2937;
+/* ====================================================================
+  THINKING OUT LOUD – PAGE STYLES
+  (Consistent with Service Page Design Language)
+==================================================================== */
+
+/* --- Page Header --- */
+.tol-page-header {
+    padding: 3rem 0;
+    background-color: #f1f1f1;
+    border-bottom: 5px solid #0b6cf0;
+    text-align: center;
 }
 
-.thinking-lead {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #111827;
-  margin-bottom: 1.5rem;
+.tol-page-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
 }
 
-.thinking-opening p {
-  color: #374151;
-  line-height: 1.8;
-  margin-bottom: 1.1rem;
+.tol-page-intro {
+    font-size: 1.15rem;
+    color: #555555;
+    max-width: 820px;
+    margin: 0 auto;
 }
 
-.thinking-quote {
-  margin: 2rem 0;
-  padding-left: 1.5rem;
-  border-left: 4px solid #9ca3af;
-  font-style: italic;
-  color: #1f2937;
+/* --- Main Content Section --- */
+.tol-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
-.thinking-invitation {
-  font-weight: 500;
-  color: #111827;
+/* --- Thought Card (Blog Entry / Letter) --- */
+.tol-thought-card {
+    margin-bottom: 3.5rem;
+    padding: 2.5rem;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-left: 8px solid #0b6cf0;
 }
 
-/* Divider */
-.thinking-divider {
-  margin: 3rem 0;
-  border: none;
-  border-top: 1px solid #e5e7eb;
+/* --- Meta Header (From / To / Subject) --- */
+.tol-meta {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 2rem;
 }
 
-/* Blog list */
-.thinking-list {
-  list-style: none;
-  padding: 0;
-  max-width: 780px;
+.tol-meta strong {
+    color: #0b6cf0;
+    font-weight: 700;
 }
 
-.thinking-item {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid #e5e7eb;
+.tol-meta-line {
+    margin-bottom: 0.4rem;
 }
 
-.thinking-link {
-  text-decoration: none;
+/* --- Body Text --- */
+.tol-content p {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
 }
 
-.thinking-title {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #111827;
+/* --- Blockquotes (Inner Thoughts / Questions) --- */
+.tol-content blockquote {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background-color: #f9f9f9;
+    border-left: 5px solid #0b6cf0;
+    font-style: italic;
+    color: #444;
 }
 
-.thinking-date {
-  font-size: 0.85rem;
-  color: #6b7280;
+/* --- Emphasis Lines --- */
+.tol-highlight {
+    padding-left: 1rem;
+    border-left: 4px solid #0b6cf0;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 2rem 0;
 }
 
-.thinking-excerpt {
-  margin-top: 0.7rem;
-  color: #374151;
-  line-height: 1.6;
+/* --- Section Divider --- */
+.tol-divider {
+    margin: 3rem 0;
+    height: 1px;
+    background-color: #e0e0e0;
 }
 
-/* Empty state */
-.thinking-empty {
-  font-style: italic;
-  color: #6b7280;
-  max-width: 780px;
+/* --- Signature --- */
+.tol-signature {
+    margin-top: 3rem;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.tol-signature-name {
+    font-weight: 800;
+    margin-top: 0.5rem;
+    color: #1a1a1a;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .tol-thought-card {
+        padding: 1.75rem;
+    }
+
+    .tol-page-title {
+        font-size: 2rem;
+    }
+
+    .tol-content p {
+        font-size: 1rem;
+    }
 }
