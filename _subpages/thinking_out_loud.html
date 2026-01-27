@@ -1,0 +1,70 @@
+---
+layout: page
+title: "Thinking Out Loud"
+permalink: /blog/thinking-out-loud/
+---
+
+<section class="thinking-opening">
+  <p class="thinking-lead">
+    This space is not here to convince you.  
+    It is here to invite you.
+  </p>
+
+  <p>
+    We live in a world that moves fast, speaks loudly, and rarely pauses to think.
+    Opinions are borrowed, beliefs are inherited, and arguments are repeated
+    without reflection. In such a world, thinking itself has quietly become a
+    radical act.
+  </p>
+
+  <p>
+    <strong>Thinking Out Loud</strong> is a space for unfinished ideas, honest
+    doubts, uncomfortable questions, and reflections that are allowed to remain
+    imperfect. Some thoughts shared here may evolve. Some may contradict older
+    ones. That is not confusion — it is growth.
+  </p>
+
+  <p>
+    You will not find instructions on what to believe.
+    Instead, you may find reasons to pause, to question, and to look again —
+    at power, fear, humanity, and yourself.
+  </p>
+
+  <blockquote class="thinking-quote">
+    Thinking does not begin with certainty.  
+    It begins with courage.
+  </blockquote>
+
+  <p class="thinking-invitation">
+    Read slowly. Disagree freely.  
+    But above all, think for yourself.
+  </p>
+</section>
+
+<hr class="thinking-divider">
+
+{% if site.categories.thinking_out_loud.size > 0 %}
+<ul class="thinking-list">
+  {% for post in site.categories.thinking_out_loud %}
+    <li class="thinking-item">
+      <a href="{{ post.url }}" class="thinking-link">
+        <h3 class="thinking-title">{{ post.title }}</h3>
+        <span class="thinking-date">
+          {{ post.date | date: "%B %d, %Y" }}
+        </span>
+      </a>
+
+      {% if post.excerpt %}
+        <p class="thinking-excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 30 }}
+        </p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="thinking-empty">
+  No thoughts have been written yet.  
+  Silence, too, is a form of thinking.
+</p>
+{% endif %}

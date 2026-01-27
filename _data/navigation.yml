@@ -77,6 +77,8 @@ main:
         url: /blog/research/
       - title: "Sustainable Development"
         url: /blog/sustainability/
+      - title: "Thinking Out Loud"
+        url: /blog/thinking-out-loud/
 
   - title: "About"
     url: /cv/
