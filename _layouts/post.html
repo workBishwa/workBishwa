@@ -56,7 +56,7 @@ layout: default
         <div class="jk-post-tags">
           {% for tag in page.tags %}
             <a href="{{ '/tags/' | append: tag | relative_url }}" class="jk-post-tag">
-              #{{ tag }}
+              {{ tag }}
             </a>
           {% endfor %}
         </div>
