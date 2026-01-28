@@ -122,7 +122,7 @@
 .jk-dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 50%; /* Center under parent */
+  left: 75%; /* Center under parent */
   transform: translateX(-50%) translateY(10px); /* Center horizontally, offset vertically */
   
   background: #fff;
