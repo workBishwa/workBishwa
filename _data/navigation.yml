@@ -17,6 +17,8 @@ main:
   - title: "Study Abroad"
     url: /study-abroad/
     children:
+      - title: "Destinations"
+        url: /study-abroad/destinations/
       - title: "Services"
         url: /study-abroad/services/
       - title: "Application Guides"

@@ -1,0 +1,47 @@
+.sa-destination-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.sa-destination-card {
+  flex: 1 1 300px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 6px solid #0b6cf0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.sa-destination-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0b6cf0;
+  margin-bottom: 1rem;
+}
+
+.sa-destination-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sa-destination-card ul li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.sa-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.4rem;
+  background: #0b6cf0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.sa-btn:hover {
+  background: #085ad0;
+}
