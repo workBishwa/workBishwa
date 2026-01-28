@@ -293,3 +293,21 @@
     background-color: #e6f7eb; /* Light success/trust color */
     border-top: 5px solid #28a745;
 }
+
+
+/* Google Forms Embed Override */
+.form-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.form-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
