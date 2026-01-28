@@ -10,7 +10,7 @@ layout: default
         <div class="jk-post-categories">
           {% for category in page.categories %}
             <a href="{{ '/blog/' | append: category | append: '/' | relative_url }}" class="jk-post-category">
-              {{ category | replace: '-', ' ' | capitalize }}
+              {{ category | replace: '_', ' ' | capitalize }}
             </a>
           {% endfor %}
         </div>
