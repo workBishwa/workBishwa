@@ -1,120 +1,151 @@
-/* ====================================================================
-  THINKING OUT LOUD – PAGE STYLES
-  (Consistent with Service Page Design Language)
-==================================================================== */
+/* =====================================================
+   THINKING OUT LOUD — MODERN EDITORIAL STYLE
+===================================================== */
 
-/* --- Page Header --- */
-.tol-page-header {
-    padding: 3rem 0;
-    background-color: #f1f1f1;
-    border-bottom: 5px solid #0b6cf0;
-    text-align: center;
+/* --- Page Container --- */
+.thinking-opening {
+  max-width: 760px;
+  margin: clamp(3rem, 6vw, 6rem) auto;
+  padding: 0 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Inter, Roboto, Helvetica, Arial, sans-serif;
+  color: #1f2937;
+  line-height: 1.85;
 }
 
-.tol-page-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 900;
-    color: #1a1a1a;
-    margin-bottom: 1rem;
-}
-
-.tol-page-intro {
-    font-size: 1.15rem;
-    color: #555555;
-    max-width: 820px;
-    margin: 0 auto;
-}
-
-/* --- Main Content Section --- */
-.tol-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-/* --- Thought Card (Blog Entry / Letter) --- */
-.tol-thought-card {
-    margin-bottom: 3.5rem;
-    padding: 2.5rem;
-    border-radius: 12px;
-    background-color: #ffffff;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    border-left: 8px solid #0b6cf0;
-}
-
-/* --- Meta Header (From / To / Subject) --- */
-.tol-meta {
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 2rem;
-}
-
-.tol-meta strong {
-    color: #0b6cf0;
-    font-weight: 700;
-}
-
-.tol-meta-line {
-    margin-bottom: 0.4rem;
+/* --- Lead Paragraph --- */
+.thinking-lead {
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 1.75rem;
 }
 
 /* --- Body Text --- */
-.tol-content p {
-    font-size: 1.05rem;
-    color: #333;
-    line-height: 1.75;
-    margin-bottom: 1.25rem;
+.thinking-opening p {
+  font-size: 1.05rem;
+  color: #374151;
+  margin-bottom: 1.4rem;
 }
 
-/* --- Blockquotes (Inner Thoughts / Questions) --- */
-.tol-content blockquote {
-    margin: 2rem 0;
-    padding: 1.5rem 2rem;
-    background-color: #f9f9f9;
-    border-left: 5px solid #0b6cf0;
-    font-style: italic;
-    color: #444;
+/* --- Quote --- */
+.thinking-quote {
+  margin: 3rem 0;
+  padding: 1.75rem 2rem;
+  border-left: 4px solid #2563eb;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  border-radius: 14px;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #1e293b;
 }
 
-/* --- Emphasis Lines --- */
-.tol-highlight {
-    padding-left: 1rem;
-    border-left: 4px solid #0b6cf0;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin: 2rem 0;
+/* --- Invitation Line --- */
+.thinking-invitation {
+  margin-top: 2.5rem;
+  font-weight: 600;
+  color: #0f172a;
 }
 
-/* --- Section Divider --- */
-.tol-divider {
-    margin: 3rem 0;
-    height: 1px;
-    background-color: #e0e0e0;
+/* --- Divider --- */
+.thinking-divider {
+  max-width: 640px;
+  margin: 4rem auto;
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e5e7eb, transparent);
 }
 
-/* --- Signature --- */
-.tol-signature {
-    margin-top: 3rem;
-    font-size: 1.05rem;
-    color: #444;
+/* =====================================================
+   POST LIST
+===================================================== */
+
+.thinking-list {
+  max-width: 820px;
+  margin: 0 auto 6rem;
+  padding: 0 1.5rem;
+  list-style: none;
+  display: grid;
+  gap: 2.5rem;
 }
 
-.tol-signature-name {
-    font-weight: 800;
-    margin-top: 0.5rem;
-    color: #1a1a1a;
+/* --- Each Post Card --- */
+.thinking-item {
+  padding: 2rem 2.25rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06),
+    0 4px 10px rgba(15, 23, 42, 0.04);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* --- Responsiveness --- */
+.thinking-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 50px rgba(15, 23, 42, 0.1),
+    0 6px 14px rgba(15, 23, 42, 0.06);
+}
+
+/* --- Link Wrapper --- */
+.thinking-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* --- Title --- */
+.thinking-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+
+/* --- Date --- */
+.thinking-date {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2563eb;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.75rem;
+}
+
+/* --- Excerpt --- */
+.thinking-excerpt {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* --- Empty State --- */
+.thinking-empty {
+  max-width: 640px;
+  margin: 6rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #64748b;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
 @media (max-width: 768px) {
-    .tol-thought-card {
-        padding: 1.75rem;
-    }
+  .thinking-title {
+    font-size: 1.2rem;
+  }
 
-    .tol-page-title {
-        font-size: 2rem;
-    }
+  .thinking-item {
+    padding: 1.6rem;
+  }
 
-    .tol-content p {
-        font-size: 1rem;
-    }
+  .thinking-opening {
+    margin: 2.5rem auto 4rem;
+  }
 }

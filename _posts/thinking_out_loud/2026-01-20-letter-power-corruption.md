@@ -2,12 +2,14 @@
 layout: post
 title: "Message to All the People Who Are Treated Like Bugs"
 date: 2026-01-27
-category: thinking_out_loud
 categories: thinking_out_loud
 permalink: /blog/thinking-out-loud/letter-power-corruption
 tags: [philosophy, power, democracy, corruption, freedom]
 author: IamNobody
 ---
+
+Let us all think about power. How power exists only through collective belief and how fear allows corruption to thrive. It urges citizens to reclaim dignity, resist silence, and rediscover their humanity through courage, thought, and self-belief.
+
 
 > from: iamnobody@nepali.citizens  
 > to: capabletothink@nepali.citizens  
