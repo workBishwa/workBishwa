@@ -2,7 +2,8 @@
 layout: post
 title: "The Ultimate Guide to Studying in Germany 2026: From Nepal to the Land of Poets and Thinkers"
 date: 2026-01-28
-categories: [Study Abroad, Germany]
+categories: [study-abroad, Study Abroad, Germany]
+permalink: /study-abroad/destinations/germany/
 tags: [Student Visa, Nepal to Germany, Higher Education, Blocked Account]
 ---
 
