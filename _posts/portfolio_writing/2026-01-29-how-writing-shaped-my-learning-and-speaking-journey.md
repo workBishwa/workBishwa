@@ -12,7 +12,9 @@ excerpt: "How writing shaped my learning and speaking journey... For a long time
 
 ## Introduction
 
-For a long time, I believed that speaking was the most important skill in learning English. Like many learners, I thought fluency came mainly from talking more. However, as my academic journey progressed—especially through university studies, research work, and IELTS preparation—I slowly realized something important: **writing was the foundation of my learning**. Writing taught me how to think clearly, how to learn deeply, and eventually, how to speak with confidence. This blog is a reflection on how I learned to write, how I used writing as a tool to learn, and how writing ultimately helped me improve my speaking skills.
+For a long time, I treated writing as little more than a chore—something to do for grades, following instructions without much personal meaning. It felt mechanical, stifling creativity and reflection. Over time, I came to see that writing is far more than that: it is a tool for thinking, understanding, and expressing myself. I slowly realized something important: **writing was the foundation of my learning**. The page became a space to explore ideas, reflect deeply, and strengthen my voice—a practice that prepares me not only for school but for life.
+
+Like many learners, I once believed fluency came mainly from speaking more. But through my academic journey—university studies, research work, and test preparation—I discovered a crucial truth: writing is the foundation of learning. It taught me how to think clearly, absorb knowledge deeply, and, ultimately, speak with confidence. This blog is my reflection on how I learned to write, how writing became a tool for learning, and how it shaped my ability to communicate effectively.
 
 ---
 
@@ -20,7 +22,7 @@ For a long time, I believed that speaking was the most important skill in learni
 
 ### Early Struggles with Writing
 
-In the beginning, writing in English felt overwhelming. I struggled with grammar, sentence structure, and vocabulary. Even when I had ideas in my mind, I found it difficult to express them clearly on paper. Writing was slow and frustrating, and I often focused more on avoiding mistakes than on expressing meaning.
+In the beginning, writing felt overwhelming. I struggled with grammar, sentence structure, and vocabulary. Even when I had ideas in my mind, I found it difficult to express them clearly on paper. Writing was slow and frustrating, and I often focused more on avoiding mistakes than on expressing meaning.
 
 At that stage, my writing was mostly mechanical. I wrote sentences because I had to—for exams, assignments, or homework—not because I understood writing as a thinking process. However, this phase was important because it made me aware of my weaknesses.
 
@@ -60,7 +62,7 @@ This process helped me identify gaps in my understanding. If I could not explain
 
 ### Writing to Learn Academic Content
 
-As a university student and researcher, writing became essential for learning complex subjects. Writing literature reviews, research summaries, and critical reflections allowed me to engage deeply with academic texts.
+As a university student, assistant lecturer, and researcher, writing became essential for learning complex subjects and for conveying complex ideas in a simple, understandable way. Writing papers, reviews, book-chapters, literature reviews, research summaries, reports, and critical reflections allowed me to engage deeply with academic texts or other written pieces.
 
 Instead of memorizing information, I learned to:
 
@@ -73,11 +75,12 @@ Writing transformed passive reading into active learning. It helped me retain in
 
 ---
 
-### Writing for IELTS and Structured Thinking
+### Writing for Academic and Structured Thinking
 
-During IELTS preparation, writing played a key role in organizing my thoughts. IELTS speaking requires clear, relevant, and well-structured answers. Writing Task 2 essays helped me develop opinions, examples, and logical flow, which I later reused in speaking tasks.
+During the preparation of academic pieces, writing played a key role in organizing my thoughts. Presentations, conferences, and speaking tasks require clear, relevant, and well-structured responses. Writing short/long essays, for example, helped me develop opinions, gather examples, and maintain a logical flow—skills that I later applied directly to speaking tasks.
 
-By writing answers to common IELTS topics, I created a mental library of ideas and vocabulary. This reduced pressure during speaking tests because I was not thinking from zero—I was recalling and adapting ideas I had already written.
+By writing answers on a variety of common topics, I gradually built a mental library of ideas and vocabulary. This made speaking less stressful because I wasn’t starting from scratch; instead, I could recall and adapt ideas I had already explored in writing.
+
 
 ---
 
@@ -124,7 +127,7 @@ Eventually, I moved from reading aloud to speaking freely using only key points.
 
 ### Reducing Speaking Anxiety Through Writing
 
-Speaking anxiety is common among English learners. Writing helped me reduce this fear. When I knew I had already expressed an idea clearly in writing, I felt more confident saying it aloud.
+Speaking anxiety is common among learners. Writing helped me reduce this fear. When I knew I had already expressed an idea clearly in writing, I felt more confident saying it aloud.
 
 Writing gave me control over language before using it spontaneously. This sense of control made speaking less intimidating and more enjoyable.
 
@@ -146,4 +149,4 @@ This integrated approach has been especially valuable in academic discussions, p
 
 My journey taught me that writing is not just a skill to be tested—it is a powerful learning tool. By learning to write, I learned how to think. By using writing to learn, I deepened my understanding of complex ideas. And by relying on writing as preparation, I learned to speak with confidence and clarity.
 
-For students, IELTS learners, and professionals, I strongly believe that improving speaking does not start with speaking more—it starts with **writing better and writing more**. Writing gives shape to thoughts, strength to ideas, and confidence to the voice.
+For students, life-long learners, and professionals, I strongly believe that writing, learning and delivery are connected, as well as improving speaking does not start with speaking more—it starts with **writing better and writing more**. Writing gives shape to thoughts, strength to ideas, and confidence to the voice.
