@@ -1,0 +1,69 @@
+---
+layout: page
+title: "Creative Writing"
+permalink: /about/creative-writing /
+---
+
+<section class="cw-page-header">
+  <h1 class="cw-page-title">Creative Writing</h1>
+  <p class="cw-page-intro">
+    Writing is where ideas slow down, take shape, and find a voice.
+    This space brings together my reflections, narratives, and
+    experiments with language—pieces written to think, to feel,
+    and to understand the world a little better.
+  </p>
+</section>
+
+<section class="cw-writing-section">
+
+  {% if site.categories.creative_writing and site.categories.creative_writing.size > 0 %}
+
+  <div class="cw-writing-grid">
+
+    {% for post in site.categories.creative_writing %}
+
+    <div class="cw-writing-card">
+      <h3>{{ post.title }}</h3>
+
+      <ul>
+        <li>
+          <strong>Written on:</strong>
+          {{ post.date | date: "%B %d, %Y" }}
+        </li>
+
+        {% if post.tags %}
+        <li>
+          <strong>Theme:</strong>
+          {{ post.tags | join: ", " }}
+        </li>
+        {% endif %}
+
+        {% if post.excerpt %}
+        <li>
+          <strong>About:</strong>
+          {{ post.excerpt | strip_html | truncatewords: 25 }}
+        </li>
+        {% endif %}
+      </ul>
+
+      <a href="{{ post.url | relative_url }}" class="cw-btn">
+        Read the piece
+      </a>
+    </div>
+
+    {% endfor %}
+
+  </div>
+
+  {% else %}
+
+  <p class="cw-empty">
+    New writing pieces will appear here soon.
+  </p>
+
+  {% endif %}
+
+</section>
+
+
+

@@ -88,6 +88,6 @@ main:
       - title: "CV"
         url: /cv/
       - title: "Creative Writing"
-        url: /portfolio/writing/
+        url: /about/creative-writing/
       - title: "Contact"
         url: /contact/
