@@ -28,7 +28,7 @@
 }
 
 .pub-title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1rem, 3vw, 1rem);
     font-weight: 800;
     color: #1a1a1a;
     margin-bottom: 0.5rem;
