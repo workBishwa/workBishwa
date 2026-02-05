@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "What Is a River? Nepal's Waters Tell a Different Story"
+title: "What Is a River? Nepal's Waters Tell a Different Story"
 date: 2026-02-03
 permalink: /blog/thinking-out-loud/river-series-01-introduction
-categories: thinking-out-loud
+categories: thinking_out_loud
 tags: [rivers, nepal, bagmati, pollution, culture]
 author: Bishwa
 ---

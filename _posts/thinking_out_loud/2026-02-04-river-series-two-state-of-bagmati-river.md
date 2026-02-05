@@ -3,7 +3,7 @@ layout: post
 title: "River in Nepal: Bagmati - Urban River"
 date: 2026-02-03
 permalink: /blog/thinking-out-loud/river-series-2-Bagmati
-categories: thinking-out-loud
+categories: thinking_out_loud
 tags: [rivers, nepal, bagmati, pollution, culture]
 author: Bishwa
 ---
