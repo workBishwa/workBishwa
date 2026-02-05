@@ -28,5 +28,5 @@ River are source of essential freshwater, vital to the culture, ecological equil
 
 In Nepal, people revere the rivers (water body) as holy, at least we think so, but our action tell another story. Philosophically, the river symbolizes purification and the cycle of life/death. Today this sanctity clashes with reality.
 
-Next: Bagmati – River No More.
+Next: [Bagmati – River No More.](/blog/thinking-out-loud/river-series-two-Bagmati)
 
