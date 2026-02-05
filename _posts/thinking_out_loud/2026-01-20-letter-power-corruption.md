@@ -1,23 +1,17 @@
 ---
 layout: post
-title: "Message to All the People Who Are Treated Like Bugs"
+title: "Power and Corruption"
 date: 2026-01-27
 categories: thinking_out_loud
-permalink: /blog/thinking-out-loud/letter-power-corruption
+permalink: /blog/thinking-out-loud/power-and-corruption
 tags: [philosophy, power, democracy, corruption, freedom]
-author: IamNobody
+author: Bishwa
 ---
 
-Let us all think about power. How power exists only through collective belief and how fear allows corruption to thrive. It urges citizens to reclaim dignity, resist silence, and rediscover their humanity through courage, thought, and self-belief.
+Let us all think about power. How power exists only through collective belief and how fear allows corruption to thrive. It urges citizens to reclaim dignity, resist silence, and rediscover their humanity through courage, thought, and self-belief...
 
 
-> from: iamnobody@nepali.citizens  
-> to: capabletothink@nepali.citizens  
-> cc: thoseactinglikegod@nepali.citizens, thoseactinglikedevil@nepali.citizens  
 
-**Subject: Message to all the people who are treated like bugs**
-
-People,
 
 Power is a strange thing. It has no body, no weight, no flesh of its own. It exists only where people believe it exists. And yet, we—citizens of this land—have handed it away, piece by piece. We convinced ourselves that rulers, officials, elites hold it over us, when in truth they hold nothing but the shadows we allow them to cast. Slowly, quietly, we have shrunk into fear. We became smaller, weaker, cowards even, not because we lacked strength, but because we forgot the source of all strength: belief.
 
@@ -53,6 +47,4 @@ And the moment we believe in ourselves again—the moment we remember that we ar
 
 In the end, this is only my thought. But what about you; what do you think? Think for yourself. Do not stumble into the same trap again and again. Let us not live as fools, nor allow ourselves to be made into fools. Instead, let us rise: as thinkers, as doers, and above all, as human beings. Let us rediscover what it truly means to be human.
 
-Sincerely,  
-IamNobody
 
