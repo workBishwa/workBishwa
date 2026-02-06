@@ -8,7 +8,7 @@ tags: [rivers, nepal, bagmati, pollution, culture]
 author: Bishwa
 ---
 
-Previous: [Bagmati – River No More.]({{ site.baseurl }}/blog/thinking-out-loud/river-series-01-introduction)
+
 
 Bagmati flows through the center of Nepal's capital city, Kathmandu. No Nepali is unware of cultural importance of Bagmati, but I doubt we are truely aware of its environmental significance. 
 
@@ -29,3 +29,5 @@ Note: I am not naming other rivers because I am sure of this fact and too lazy f
 
 
 Bagmati river is encroached, made narrow and straight, and its riverbed channelized. This process removed natural meanders, floodplains that would have helped on self-cleaning process. Untreated wastewater from domestic sewage to hospital effluants and industrial discharge is dumped into Bagmati. In dry seasons, the natural water flow drops to almost zero leaving behind only black sludge.
+
+←: Previous: [Bagmati – River No More.]({{ site.baseurl }}/blog/thinking-out-loud/river-series-01-introduction)
