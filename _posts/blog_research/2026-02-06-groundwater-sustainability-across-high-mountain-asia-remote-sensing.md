@@ -81,7 +81,9 @@ GRACE satellites detect gravity change, which reflects the combined mass of all 
 
 So researchers first estimate:
 
-$$ \Delta \text{TWS} \quad \text{(change in total water storage)} $$
+$$ \Delta TWS \; (\text{Total Water Storage Change})$$
+
+
 
 **Mascon = Mass Concentration blocks**: Instead of representing Earth’s gravity using mathematical waves (*spherical harmonics*), the mascon method divides Earth into grid-like blocks and estimates water mass change in each block directly.
 
@@ -94,7 +96,8 @@ Two major research centers process GRACE data independently:
 
 Because no single dataset is perfect, researchers average them:
 
-$$ TWS\_{\text{mean}} = \frac{TWS\_{\text{CSR}} + TWS\_{\text{JPL}}}{2} $$
+$$ TWS_{\text{mean}} = \frac{TWS_{\text{CSR}} + TWS_{\text{JPL}}}{2} $$
+
 
 This is similar to a **multi-model ensemble approach**, but for satellite products. **Why averaging is done:** Reduce dataset-specific bias, Minimize processing uncertainty, and Improve robustness of results  
 
