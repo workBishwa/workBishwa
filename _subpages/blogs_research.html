@@ -1,0 +1,66 @@
+---
+layout: page
+title: "Blogs on Research"
+permalink: /blog/research/
+---
+
+
+<section class="cw-page-header">
+  <h1 class="cw-page-title">Research Blogs</h1>
+  <p class="cw-page-intro">
+    A collection of in-depth research blogs exploring cutting-edge topics at the intersection of academic research, technological innovation, and real-world applications. Dive into methodologies, findings, and practical insights.
+  </p>
+</section>
+
+<section class="cw-writing-section">
+
+  {% if site.categories.research_blog and site.categories.research_blog.size > 0 %}
+
+  <div class="cw-writing-grid">
+
+    {% for post in site.categories.research_blog %}
+
+    <div class="cw-writing-card">
+      <h3>{{ post.title }}</h3>
+
+      <ul>
+        <li>
+          <strong>Written on:</strong>
+          {{ post.date | date: "%B %d, %Y" }}
+        </li>
+
+        {% if post.tags %}
+        <li>
+          <strong>Theme:</strong>
+          {{ post.tags | join: ", " }}
+        </li>
+        {% endif %}
+
+        {% if post.excerpt %}
+        <li>
+          <strong>About:</strong>
+          {{ post.excerpt | strip_html | truncatewords: 25 }}
+        </li>
+        {% endif %}
+      </ul>
+
+      <a href="{{ post.url | relative_url }}" class="cw-btn">
+        Read the piece
+      </a>
+    </div>
+
+    {% endfor %}
+
+  </div>
+
+  {% else %}
+
+  <p class="cw-empty">
+    New writing pieces will appear here soon.
+  </p>
+
+  {% endif %}
+
+</section>
+
+
