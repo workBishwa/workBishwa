@@ -99,7 +99,9 @@ $$
 
 This is similar to a **multi-model ensemble approach**, but for satellite products. **Why averaging is done:** Reduce dataset-specific bias, Minimize processing uncertainty, and Improve robustness of results  
 
-2. Missing data due to various causes such as instrumental interruptions were derived from linear interpolation.
+2. Missing data filling:
+   - GRACE time series (April 2002 to June 2017) instrumental interruptions: derived from linear interpolation.
+   - Between GRACE and GRACE-FO (July 2017–May 2018): TWS reconstructed - data-driven gapfilling model
 
 ---
 References:
