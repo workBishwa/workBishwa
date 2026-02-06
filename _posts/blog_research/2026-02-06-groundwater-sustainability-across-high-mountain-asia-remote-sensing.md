@@ -4,8 +4,6 @@ title: "Assessing groundwater sustainability acrocss high mountain asia using re
 date: 2026-02-06
 permalink: "/blog/research/groundwater-sustainability-across-high-mountain-asia-remote-sensing"
 categories: blog_research
-authors: [kai Liu, Xueke Li, Yong Bo, Shudong Wang, Guangsheng Zhou]
-link:
 ---
 
 High mountain of asia heavily depend on glacier for water security, therfore understanding long-term evolution of groundwater storage (GWS) is crucial. This study uses remote sensing, earth system modeling and AI for historical and future evolution in ground water storage in this critical region.
@@ -16,7 +14,12 @@ Meltwater from glaciers contributes to the volume of streamflow of the rivers in
 
 ## Study Area
 In this study **Tibetan Plateau**, **The Himalayas,** and **The Tianshan Mountains** are considered as **High Mountain Asia (HMA)**.
-![HMA : Study Area](assets\images\blog\blog-research-groundwater-sustainability-across-high-mountain-asia-remote-sensing.png)
+
+<figure>
+    <img src="/assets/images/blog/blog-research-groundwater-sustainability-across-high-mountain-asia-remote-sensing.png" 
+         alt="HMA: Study Area">
+    <figcaption>Figure 1: High Mountain Asia (HMA) study area showing the region of interest for groundwater sustainability research</figcaption>
+</figure>
 
 
 
