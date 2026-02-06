@@ -8,6 +8,7 @@ tags: [rivers, nepal, bagmati, pollution, culture]
 author: Bishwa
 ---
 
+Previous: [Bagmati – River No More.]({{ site.baseurl }}/blog/thinking-out-loud/river-series-01-introduction)
 
 Bagmati flows through the center of Nepal's capital city, Kathmandu. No Nepali is unware of cultural importance of Bagmati, but I doubt we are truely aware of its environmental significance. 
 
