@@ -19,7 +19,7 @@ High concrete walls and embankments have transformed "Bagmati river" into the "B
 
 ### Visual Reality of Bagmati
 
-![Bagmati river flood view]([image.png](https://news.mongabay.com/2024/02/controversy-brews-over-proposed-dam-on-kathmandus-bagmati-river/))
+![Bagmati river flood view](https://admin.askmeaboutnepal.com/storage/uploads/2024/02/Pashupatinath.jpg)
 
 ![Open sewage dump](https://s.yimg.com/ny/api/res/1.2/rHXa3vtS5U9p7bQSn61ZHQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MDtjZj13ZWJw/https://media.zenfs.com/en/ap.org/364fce6e08eb0306d4345762407905c2)
 
