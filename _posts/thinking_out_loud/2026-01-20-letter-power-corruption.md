@@ -5,7 +5,7 @@ date: 2026-01-27
 categories: thinking_out_loud
 permalink: /blog/thinking-out-loud/power-and-corruption
 tags: [philosophy, power, democracy, corruption, freedom]
-author: Bishwa
+author: Bishwa Prakash Puri
 ---
 
 Let us all think about power. How power exists only through collective belief and how fear allows corruption to thrive. It urges citizens to reclaim dignity, resist silence, and rediscover their humanity through courage, thought, and self-belief...

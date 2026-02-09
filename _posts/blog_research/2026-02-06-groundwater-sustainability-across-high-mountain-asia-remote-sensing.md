@@ -98,6 +98,19 @@ $$ TWS_{\text{mean}} = \frac{TWS_{\text{CSR}} + TWS_{\text{JPL}}}{2} $$ -- This 
    - GRACE time series (April 2002 to June 2017) instrumental interruptions: derived from linear interpolation.
    - Between GRACE and GRACE-FO (July 2017–May 2018): TWS reconstructed - data-driven gapfilling model
 
+
+
+
+
+
+## Findings
+
+- about two-thirds of HMA experienced declining GWS over the past two decades, with the most losses concentrated in heavily populated and irrigated downstream basins such as the Ganges–Brahmaputra, Amu Darya, and Tarim.
+
+
+
+
+
 ---
 References:
 - [paper read...](https://iopscience.iop.org/article/10.1088/1748-9326/ae2e1b)
