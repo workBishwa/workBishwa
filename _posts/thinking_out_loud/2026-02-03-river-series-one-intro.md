@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What Is a River? Nepal's Waters Tell a Different Story"
+title: "The River as Relationship: Water, Land, and Human Life"
 date: 2026-02-03
 permalink: /blog/thinking-out-loud/river-series-01-introduction
 categories: thinking_out_loud
@@ -8,7 +8,7 @@ tags: [rivers, nepal, bagmati, pollution, culture]
 author: Bishwa
 ---
 
-# What Is a River? Nepal's Waters Tell a Different Story
+# The River as Relationship: Water, Land, and Human Life 
 
 
 
@@ -28,5 +28,5 @@ River are source of essential freshwater, vital to the culture, ecological equil
 
 In Nepal, people revere the rivers (water body) as holy, at least we think so, but our action tell another story. Philosophically, the river symbolizes purification and the cycle of life/death. Today this sanctity clashes with reality.
 
-:→ Next: [Bagmati – River No More.]({{ site.baseurl }}/blog/thinking-out-loud/river-series-2-Bagmati)
+:→ Next: [Bagmati River: From Sacred Stream to Urban Canal]({{ site.baseurl }}/blog/thinking-out-loud/river-series-2-Bagmati)
 

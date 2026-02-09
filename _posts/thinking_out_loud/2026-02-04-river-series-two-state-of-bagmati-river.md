@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "River in Nepal: Bagmati - Urban River"
+title: "Bagmati River: From Sacred Stream to Urban Canal"
 date: 2026-02-03
 permalink: /blog/thinking-out-loud/river-series-2-Bagmati
 categories: thinking_out_loud
@@ -14,9 +14,10 @@ Bagmati flows through the center of Nepal's capital city, Kathmandu. No Nepali i
 
 High concrete walls and embankments have transformed "Bagmati river" into the "Bagmati Canal". Raw sewage, industrial waste and garbage then turn the "Bagmati Canal" into an open "Bagmati Sewer". Because of this, Bagmati is biologically dead, aesthetically poor, disgustingly smelley. This is the case for almost all Urban rivers in Nepal. 
 
-Note: I am not naming other rivers because I am sure of this fact and too lazy for research specifics. (Nobody paid me to write this, so chill..)
+>Note: I am not naming other rivers because I am sure of this fact and too lazy for research specifics. (Nobody paid me to write this, so chill..)
 
 
+### Visual Reality of Bagmati
 
 ![Bagmati river flood view]([image.png](https://news.mongabay.com/2024/02/controversy-brews-over-proposed-dam-on-kathmandus-bagmati-river/))
 
@@ -30,4 +31,4 @@ Note: I am not naming other rivers because I am sure of this fact and too lazy f
 
 Bagmati river is encroached, made narrow and straight, and its riverbed channelized. This process removed natural meanders, floodplains that would have helped on self-cleaning process. Untreated wastewater from domestic sewage to hospital effluants and industrial discharge is dumped into Bagmati. In dry seasons, the natural water flow drops to almost zero leaving behind only black sludge.
 
-←: Previous: [Bagmati – River No More.]({{ site.baseurl }}/blog/thinking-out-loud/river-series-01-introduction)
+←: Previous: [The River as Relationship: Water, Land, and Human Life]({{ site.baseurl }}/blog/thinking-out-loud/river-series-01-introduction)
