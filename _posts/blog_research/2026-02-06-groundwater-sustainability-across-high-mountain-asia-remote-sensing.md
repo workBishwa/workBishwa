@@ -18,7 +18,7 @@ In this study **Tibetan Plateau**, **The Himalayas,** and **The Tianshan Mountai
 <figure>
     <img src="/assets/images/blog/blog-research-groundwater-sustainability-across-high-mountain-asia-remote-sensing.png" 
          alt="HMA: Study Area">
-    <figcaption>Figure 1: High Mountain Asia (HMA) study area showing the region of interest for groundwater sustainability research</figcaption>
+    <figcaption>Figure : High Mountain Asia (HMA) study area showing the region of interest for groundwater sustainability research</figcaption>
 </figure>
 
 
@@ -106,8 +106,11 @@ $$ TWS_{\text{mean}} = \frac{TWS_{\text{CSR}} + TWS_{\text{JPL}}}{2} $$ -- This 
 ## Findings
 
 - about two-thirds of HMA experienced declining GWS over the past two decades, with the most losses concentrated in heavily populated and irrigated downstream basins such as the Ganges–Brahmaputra, Amu Darya, and Tarim.
-
-
+- Overall, approximately 69% of land area in HMA experienced declining GWS trends, with the most losses occurring in densely populated and agriculturally intensive downstream basins.
+-  Decline indicates the vulnerability of downstream water systems, where storage and recharge is increasingly insufficient to offset intensive extraction and evapotranspiration losses.
+-  Endorheic sub-basins within the interior Tibetan Plateau, particularly areas such as Hoh Xil and the Qiangtang Plateau, exhibited positive GWS trends.
+-  GWS in HMA exhibited pronounced heterogeneity shaped by both climatic and human drivers.
+-  climatic drivers (i.e. precipitation, air temperature and shortwave radiation) accounted for approximately 47% of GWS variability. 
 
 
 

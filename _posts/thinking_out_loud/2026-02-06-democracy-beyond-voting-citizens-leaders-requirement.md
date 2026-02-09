@@ -8,7 +8,13 @@ permalink: "/blog/thinking-out-loud/democracy-beyond-voting-the-citizens-and-lea
 author: Bishwa Prakash Puri
 ---
 
-According to the constitution of Nepal, Nepal is **an independent, indivisible, sovereign, secular, inclusive, "Democratic", "Socialism-oriented", "Federal democratic republican State"**. These constitutional descriptors are not symbolic labels; they outline how political power is structured, exercised, and legitimized...
+According to the constitution of Nepal, Nepal is **an independent, indivisible, sovereign, secular, inclusive, "Democratic", "Socialism-oriented", "Federal democratic republican State"**. These constitutional descriptors are not symbolic labels; they outline how political power is structured, exercised, and legitimized.
+
+<figure>
+    <img src="/assets/images/blog/blog-thinking-out-loud-democracy-beyond-voting-the-citizens-and-leaders-it-requires.png" 
+         alt="HMA: Study Area">
+    <figcaption>Figure : Nepal's Democracy Depends on Our Capacity to Be Citizens and Leaders</figcaption>
+</figure>
 
 What does it mean, then?
 
