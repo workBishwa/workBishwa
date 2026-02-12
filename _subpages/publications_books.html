@@ -5,22 +5,149 @@ permalink: /publications/books/
 ---
 
 <h1>Books & Chapters</h1>
-<p>Books and chapters contributed to edited volumes.</p>
+<p>Books and book chapters contributed to authored and edited volumes, organized by subject area.</p>
 
-{% if site.categories.publications_books.size > 0 %}
-<ul class="publications-list">
-  {% for post in site.categories.publications_books %}
-    <li class="publication-item">
-      <a href="{{ post.url }}" class="publication-link">
-        <h3>{{ post.title }}</h3>
-        <span class="publication-date">{{ post.date | date: "%B %d, %Y" }}</span>
-      </a>
-      {% if post.excerpt %}
-        <p class="publication-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
-{% else %}
-<p>No books or chapters published yet.</p>
-{% endif %}
+<!-- ========================= -->
+<!-- ======== BOOKS ========== -->
+<!-- ========================= -->
+<section class="publication-section">
+
+  <h2>Books</h2>
+
+  {% assign books = site.categories.publications_books %}
+
+  {% if books.size > 0 %}
+
+    <!-- ===== Statistics Books ===== -->
+    {% assign stats_books = books | where: "subject", "statistics" %}
+    {% if stats_books.size > 0 %}
+      <div class="topic-block">
+        <h3>Statistics</h3>
+        <ul class="publications-list">
+          {% for post in stats_books %}
+            <li class="publication-item">
+              <a href="{{ post.url }}" class="publication-link">
+                <h4>{{ post.title }}</h4>
+                <span class="publication-date">
+                  {{ post.date | date: "%B %d, %Y" }}
+                </span>
+              </a>
+
+              {% if post.excerpt %}
+                <p class="publication-excerpt">
+                  {{ post.excerpt | strip_html | truncatewords: 30 }}
+                </p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <!-- ===== Hydrology Books ===== -->
+    {% assign hydro_books = books | where: "subject", "hydrology" %}
+    {% if hydro_books.size > 0 %}
+      <div class="topic-block">
+        <h3>Hydrology</h3>
+        <ul class="publications-list">
+          {% for post in hydro_books %}
+            <li class="publication-item">
+              <a href="{{ post.url }}" class="publication-link">
+                <h4>{{ post.title }}</h4>
+                <span class="publication-date">
+                  {{ post.date | date: "%B %d, %Y" }}
+                </span>
+              </a>
+
+              {% if post.excerpt %}
+                <p class="publication-excerpt">
+                  {{ post.excerpt | strip_html | truncatewords: 30 }}
+                </p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <!-- ===== Add More Subjects Below Anytime ===== -->
+    <!-- Example: Climate, Environment, Policy, AI -->
+
+  {% else %}
+    <p>No books published yet.</p>
+  {% endif %}
+
+</section>
+
+
+
+<!-- ============================ -->
+<!-- ======== CHAPTERS ========== -->
+<!-- ============================ -->
+<section class="publication-section">
+
+  <h2>Book Chapters</h2>
+
+  {% assign chapters = site.categories.publications_chapters %}
+
+  {% if chapters.size > 0 %}
+
+    <!-- ===== Statistics Chapters ===== -->
+    {% assign stats_chapters = chapters | where: "subject", "statistics" %}
+    {% if stats_chapters.size > 0 %}
+      <div class="topic-block">
+        <h3>Statistics</h3>
+        <ul class="publications-list">
+          {% for post in stats_chapters %}
+            <li class="publication-item">
+              <a href="{{ post.url }}" class="publication-link">
+                <h4>{{ post.title }}</h4>
+                <span class="publication-date">
+                  {{ post.date | date: "%B %d, %Y" }}
+                </span>
+              </a>
+
+              {% if post.excerpt %}
+                <p class="publication-excerpt">
+                  {{ post.excerpt | strip_html | truncatewords: 30 }}
+                </p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <!-- ===== Hydrology Chapters ===== -->
+    {% assign hydro_chapters = chapters | where: "subject", "hydrology" %}
+    {% if hydro_chapters.size > 0 %}
+      <div class="topic-block">
+        <h3>Hydrology</h3>
+        <ul class="publications-list">
+          {% for post in hydro_chapters %}
+            <li class="publication-item">
+              <a href="{{ post.url }}" class="publication-link">
+                <h4>{{ post.title }}</h4>
+                <span class="publication-date">
+                  {{ post.date | date: "%B %d, %Y" }}
+                </span>
+              </a>
+
+              {% if post.excerpt %}
+                <p class="publication-excerpt">
+                  {{ post.excerpt | strip_html | truncatewords: 30 }}
+                </p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <!-- ===== Future Subjects Go Here ===== -->
+
+  {% else %}
+    <p>No book chapters published yet.</p>
+  {% endif %}
+
+</section>
