@@ -84,9 +84,10 @@ layout: default
               <h3 class="jk-post-footer-title">Tags</h3>
               <div class="jk-post-footer-tags">
                 {% for tag in page.tags %}
-                  <a href="{{ '/tags/' | append: tag | relative_url }}" class="jk-post-footer-tag">
+                  <a href="/tags/?tag={{ tag | slugify }}" class="jk-post-footer-tag">
                     {{ tag }}
                   </a>
+                  
                 {% endfor %}
               </div>
             </div>
@@ -97,9 +98,10 @@ layout: default
               <h3 class="jk-post-footer-title">Categories</h3>
               <div class="jk-post-footer-categories">
                 {% for category in page.categories %}
-                  <a href="{{ '/blog/' | append: category | append: '/' | relative_url }}" class="jk-post-footer-category">
+                  <a href="/blog/?category={{ category | slugify }}" class="jk-post-footer-category">
                     {{ category | replace: '_', ' ' | capitalize }}
                   </a>
+
                 {% endfor %}
               </div>
             </div>

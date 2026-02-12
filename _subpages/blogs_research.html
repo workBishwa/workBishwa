@@ -4,7 +4,6 @@ title: "Blogs on Research"
 permalink: /blog/research/
 ---
 
-
 <section class="cw-page-header">
   <h1 class="cw-page-title">Research Blogs</h1>
   <p class="cw-page-intro">
@@ -16,51 +15,65 @@ permalink: /blog/research/
 
   {% if site.categories.blog_research and site.categories.blog_research.size > 0 %}
 
-  <div class="cw-writing-grid">
+    {%- comment -%}
+      Sort posts by date (newest first)
+    {%- endcomment -%}
 
-    {% for post in site.categories.blog_research | sort: 'date' | reverse %}
+    {% assign research_posts = site.categories.blog_research
+       | sort: "date"
+       | reverse %}
 
-    <div class="cw-writing-card">
-      <h3>{{ post.title }}</h3>
+    <div class="cw-writing-grid">
 
-      <ul>
-        <li>
-          <strong>Written on:</strong>
-          {{ post.date | date: "%B %d, %Y" }}
-        </li>
+      {% for post in research_posts %}
 
-        {% if post.tags %}
-        <li>
-          <strong>Theme:</strong>
-          {{ post.tags | join: ", " }}
-        </li>
-        {% endif %}
+      <div class="cw-writing-card">
 
-        {% if post.excerpt %}
-        <li>
-          <strong>About:</strong>
-          {{ post.excerpt | strip_html | truncatewords: 25 }}
-        </li>
-        {% endif %}
-      </ul>
+        <h3 class="cw-writing-title">
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </h3>
 
-      <a href="{{ post.url | relative_url }}" class="cw-btn">
-        Read the piece
-      </a>
+        <ul class="cw-writing-meta">
+
+          <li>
+            <strong>Written on:</strong>
+            {{ post.date | date: "%B %d, %Y" }}
+          </li>
+
+          {% if post.tags %}
+          <li>
+            <strong>Theme:</strong>
+            {{ post.tags | join: ", " }}
+          </li>
+          {% endif %}
+
+          {% if post.excerpt %}
+          <li>
+            <strong>About:</strong>
+            {{ post.excerpt | strip_html | truncatewords: 25 }}
+          </li>
+          {% endif %}
+
+        </ul>
+
+        <a href="{{ post.url | relative_url }}" class="cw-btn">
+          Read the piece
+        </a>
+
+      </div>
+
+      {% endfor %}
+
     </div>
-
-    {% endfor %}
-
-  </div>
 
   {% else %}
 
-  <p class="cw-empty">
-    New writing pieces will appear here soon.
-  </p>
+    <p class="cw-empty">
+      New writing pieces will appear here soon.
+    </p>
 
   {% endif %}
 
 </section>
-
-
