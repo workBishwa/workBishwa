@@ -128,4 +128,4 @@ Germany is not just a place to study; it’s a place to build a career.
 
 The journey to Germany requires patience and precision. While the paperwork might seem daunting, the reward—a degree from a top-tier global economy and the chance to live in a multicultural European hub—is well worth the effort.
 
-**Would you like me to create a customized checklist for your specific course of study or help you draft your Letter of Motivation?**
+**Would you like to learn more about specific universities or courses in Germany? Contact me today...**
