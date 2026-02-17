@@ -1,0 +1,611 @@
+{
+  "categories": {
+    "Hazard and Risk Knowledge": {
+      "color": "#FF6B6B",
+      "desc": "Terms related to the nature of threats — hazard types, processes, risk concepts, vulnerability, exposure, and spatial analysis."
+    },
+    "Disaster Impacts and Measurement": {
+      "color": "#4A90E2",
+      "desc": "Terms focused on consequences — how we measure damage to people, property, and society, plus prediction and warning systems."
+    },
+    "Disaster Management and Governance": {
+      "color": "#2ECC71",
+      "desc": "Terms covering the human response — preparedness, response, recovery, risk reduction policy, and governance frameworks."
+    }
+  },
+  "nodes": [
+    
+    {
+      "id": "Hazard",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 28,
+      "def": "A potentially damaging physical event, phenomenon, or human activity that may cause loss of life, injury, property damage, social and economic disruption, or environmental degradation.",
+      "rel": ["Risk", "Exposure", "Vulnerability", "Triggering Factors", "Cascading Hazard", "Compound Hazard", "Geological Hazard", "Hydrological Hazard", "Meteorological Hazard", "Climatological Hazard", "Biological Hazard", "Technological Hazard", "Anthropogenic Hazard"]
+    },
+    {
+      "id": "Disaster",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 28,
+      "def": "A serious disruption of the functioning of a community or society involving widespread human, material, economic, or environmental losses that exceeds the ability of the affected community to cope using its own resources.",
+      "rel": ["Hazard", "Risk", "Impact", "Loss and Damage", "Mortality", "Morbidity", "Economic Loss", "Displacement", "Recovery"]
+    },
+    {
+      "id": "Risk",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 26,
+      "def": "The probability of harmful consequences, or expected losses resulting from interactions between hazards and vulnerable conditions.",
+      "rel": ["Hazard", "Exposure", "Vulnerability", "Hazard Risk", "Disaster Risk", "Risk Assessment", "Acceptable Risk"]
+    },
+    {
+      "id": "Exposure",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 24,
+      "def": "The situation of people, infrastructure, housing, production capacities, and other tangible human assets located in hazard-prone areas.",
+      "rel": ["Hazard", "Vulnerability", "Risk", "Elements at Risk", "Asset Exposure", "Livelihood Exposure", "Critical Infrastructure"]
+    },
+    {
+      "id": "Vulnerability",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 26,
+      "def": "The conditions determined by physical, social, economic, and environmental factors which increase the susceptibility of a community to the impact of hazards.",
+      "rel": ["Risk", "Exposure", "Capacity", "Physical Vulnerability", "Social Vulnerability", "Economic Vulnerability", "Environmental Vulnerability", "Institutional Vulnerability", "Sensitivity", "Adaptive Capacity", "Coping Capacity"]
+    },
+    {
+      "id": "Capacity",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "The combination of all the strengths, attributes, and resources available within a community that can be used to cope with and recover from disasters.",
+      "rel": ["Vulnerability", "Resilience", "Coping Capacity", "Adaptive Capacity", "Response", "Recovery"]
+    },
+    {
+      "id": "Resilience",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 24,
+      "def": "The ability of a system, community, or society exposed to hazards to resist, absorb, accommodate, and recover from the effects of a hazard in a timely and efficient manner.",
+      "rel": ["Capacity", "Recovery", "Adaptive Capacity", "Build Back Better", "Disaster-Resilient Development"]
+    },
+    {
+      "id": "Impact",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "The actual effects of a disaster on people, structures, services, and systems, including both immediate and long-term consequences.",
+      "rel": ["Disaster", "Loss and Damage", "Direct Loss", "Indirect Loss", "Intangible Loss", "Mortality", "Morbidity", "Economic Loss", "Displacement"]
+    },
+    {
+      "id": "Loss and Damage",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "Measurable negative outcomes of a disaster including deaths, injuries, property destruction, and economic disruption.",
+      "rel": ["Disaster", "Impact", "Economic Loss", "Direct Loss", "Indirect Loss", "Intangible Loss", "Mortality"]
+    },
+
+    
+    {
+      "id": "Geological Hazard",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "Natural earth processes or phenomena that may cause loss of life, injury, or property damage, including earthquakes, volcanic activity, landslides, and tsunamis.",
+      "rel": ["Hazard", "Magnitude", "Intensity", "Frequency", "Triggering Factors", "Cascading Hazard"]
+    },
+    {
+      "id": "Hydrological Hazard",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "Events caused by the occurrence, movement, and distribution of water on Earth, including floods, debris flows, and avalanches.",
+      "rel": ["Hazard", "Magnitude", "Intensity", "Frequency", "Duration", "Return Period", "Inundation Mapping"]
+    },
+    {
+      "id": "Meteorological Hazard",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "Atmospheric phenomena that may cause loss of life, injury, or property damage, including cyclones, storms, and severe weather events.",
+      "rel": ["Hazard", "Forecasting", "Nowcasting", "Early Warning System", "Lead Time"]
+    },
+    {
+      "id": "Climatological Hazard",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "Processes of atmospheric origin related to long-term climate variability, including drought, heatwaves, and wildfires.",
+      "rel": ["Hazard", "Duration", "Climate Change Adaptation", "Mitigation (Climate)"]
+    },
+    {
+      "id": "Biological Hazard",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "Processes of organic origin or those conveyed by biological vectors, including epidemics, pandemics, and pest outbreaks.",
+      "rel": ["Hazard", "Morbidity", "Mortality", "Exposure"]
+    },
+    {
+      "id": "Technological Hazard",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "Hazards originating from technological or industrial conditions, including industrial accidents, chemical spills, and nuclear incidents.",
+      "rel": ["Hazard", "Natech Disaster", "Systemic Risk", "Contingency Planning"]
+    },
+    {
+      "id": "Anthropogenic Hazard",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "Hazards induced entirely or predominantly by human activities and choices, including pollution, deforestation, and environmental degradation.",
+      "rel": ["Hazard", "Environmental Vulnerability", "Nature-based Solutions"]
+    },
+
+    
+    {
+      "id": "Magnitude",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "A quantitative measure of the size or strength of a hazard event, such as earthquake magnitude on the Richter scale.",
+      "rel": ["Hazard", "Intensity", "Probability", "Return Period"]
+    },
+    {
+      "id": "Intensity",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "A measure of the severity of a hazard event at a specific location, describing its effects on people, structures, and the environment.",
+      "rel": ["Hazard", "Magnitude", "Impact", "Hazard Zonation"]
+    },
+    {
+      "id": "Frequency",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The number of occurrences of a hazard event per unit time, often expressed as events per year or per century.",
+      "rel": ["Hazard", "Return Period", "Probability", "Risk Assessment"]
+    },
+    {
+      "id": "Duration",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The length of time a hazard event persists, from its onset to its conclusion.",
+      "rel": ["Hazard", "Impact", "Exposure", "Recovery"]
+    },
+    {
+      "id": "Return Period",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 20,
+      "def": "The average time interval between hazard events of a similar size or intensity, often expressed in years.",
+      "rel": ["Hazard", "Frequency", "Probability", "Risk Assessment"]
+    },
+    {
+      "id": "Probability",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The likelihood of a specific hazard event occurring, often expressed as a percentage or decimal fraction.",
+      "rel": ["Hazard", "Risk", "Frequency", "Return Period", "Forecasting"]
+    },
+    {
+      "id": "Triggering Factors",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "Events or conditions that initiate or precipitate the occurrence of a hazard.",
+      "rel": ["Hazard", "Cascading Hazard", "Compound Hazard", "Natech Disaster"]
+    },
+    {
+      "id": "Cascading Hazard",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "A sequence of events where one hazard triggers another hazard, creating a chain of interconnected events.",
+      "rel": ["Hazard", "Compound Hazard", "Triggering Factors", "Domino Effect", "Systemic Risk", "Natech Disaster"]
+    },
+    {
+      "id": "Compound Hazard",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "Multiple hazards occurring simultaneously or in close succession, creating combined impacts greater than individual events.",
+      "rel": ["Hazard", "Cascading Hazard", "Multi-hazard Risk", "Systemic Risk"]
+    },
+
+    
+    {
+      "id": "Hazard Risk",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The probability of a specific hazard event occurring in a given area over a specified time period.",
+      "rel": ["Risk", "Hazard", "Probability", "Frequency", "Return Period"]
+    },
+    {
+      "id": "Disaster Risk",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The potential loss of life, injury, or destroyed assets that could occur to a system or community over a specified time period.",
+      "rel": ["Risk", "Disaster", "Hazard", "Exposure", "Vulnerability", "Risk Assessment"]
+    },
+    {
+      "id": "Risk Assessment",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 22,
+      "def": "A methodology to determine the nature and extent of risk by analyzing potential hazards and evaluating existing conditions of vulnerability.",
+      "rel": ["Risk", "Hazard Risk", "Disaster Risk", "Risk Analysis", "Risk Evaluation", "Risk Mapping"]
+    },
+    {
+      "id": "Risk Analysis",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The systematic use of available information to determine how often specified events may occur and the magnitude of their consequences.",
+      "rel": ["Risk Assessment", "Risk Evaluation", "Probability", "Impact", "Hazard Risk"]
+    },
+    {
+      "id": "Risk Evaluation",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The process of comparing estimated risk levels against risk criteria to determine the significance of the risk.",
+      "rel": ["Risk Assessment", "Risk Analysis", "Acceptable Risk", "Risk Perception"]
+    },
+    {
+      "id": "Risk Perception",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The subjective judgment that people make about the characteristics and severity of a risk, influenced by psychological, social, and cultural factors.",
+      "rel": ["Risk", "Acceptable Risk", "Preparedness", "Response"]
+    },
+    {
+      "id": "Acceptable Risk",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The level of potential losses that a society or community considers acceptable given existing social, economic, political, and cultural conditions.",
+      "rel": ["Risk", "Risk Evaluation", "Risk Perception", "Mitigation"]
+    },
+
+    
+    {
+      "id": "Physical Vulnerability",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 20,
+      "def": "Susceptibility related to the location, design, and construction of buildings and infrastructure, making them prone to damage from hazards.",
+      "rel": ["Vulnerability", "Elements at Risk", "Critical Infrastructure", "Mitigation", "Build Back Better"]
+    },
+    {
+      "id": "Social Vulnerability",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 20,
+      "def": "Susceptibility influenced by demographic and social factors including age, gender, health status, marginalization, and social networks.",
+      "rel": ["Vulnerability", "Sensitivity", "Coping Capacity", "Displacement", "Mortality", "Morbidity"]
+    },
+    {
+      "id": "Economic Vulnerability",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 20,
+      "def": "Susceptibility related to poverty, livelihood insecurity, lack of financial resources, and economic marginalization.",
+      "rel": ["Vulnerability", "Livelihood Exposure", "Economic Loss", "Livelihood Recovery", "Capacity"]
+    },
+    {
+      "id": "Environmental Vulnerability",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 20,
+      "def": "Susceptibility resulting from degraded ecosystems, resource depletion, and loss of natural buffers that protect against hazards.",
+      "rel": ["Vulnerability", "Anthropogenic Hazard", "Nature-based Solutions", "Climate Change Adaptation"]
+    },
+    {
+      "id": "Institutional Vulnerability",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 20,
+      "def": "Susceptibility arising from weaknesses in governance structures, policies, legal frameworks, and organizational capacity.",
+      "rel": ["Vulnerability", "Disaster Governance", "Contingency Planning", "Incident Command System", "Sendai Framework"]
+    },
+    {
+      "id": "Sensitivity",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 16,
+      "def": "The degree to which a system or community is affected by or responsive to hazard impacts.",
+      "rel": ["Vulnerability", "Adaptive Capacity", "Impact", "Exposure"]
+    },
+    {
+      "id": "Adaptive Capacity",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The ability of systems, institutions, and people to adjust to potential damage, take advantage of opportunities, or respond to consequences.",
+      "rel": ["Vulnerability", "Capacity", "Resilience", "Coping Capacity", "Climate Change Adaptation"]
+    },
+    {
+      "id": "Coping Capacity",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The ability of people, organizations, and systems to manage adverse situations using available resources and skills during emergencies.",
+      "rel": ["Vulnerability", "Capacity", "Adaptive Capacity", "Response", "Recovery"]
+    },
+
+    
+    {
+      "id": "Elements at Risk",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 20,
+      "def": "The population, buildings, infrastructure, economic activities, and environmental assets located in hazard-prone areas.",
+      "rel": ["Exposure", "Risk", "Asset Exposure", "Livelihood Exposure", "Critical Infrastructure"]
+    },
+    {
+      "id": "Asset Exposure",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 16,
+      "def": "The value and location of physical infrastructure, property, and resources situated in hazard zones.",
+      "rel": ["Exposure", "Elements at Risk", "Economic Loss", "Direct Loss", "Risk Mapping"]
+    },
+    {
+      "id": "Livelihood Exposure",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 16,
+      "def": "The degree to which economic activities, employment, and income-generating systems are situated in hazard-prone areas.",
+      "rel": ["Exposure", "Economic Vulnerability", "Economic Loss", "Livelihood Recovery"]
+    },
+    {
+      "id": "Critical Infrastructure",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 20,
+      "def": "Physical structures, facilities, networks, and services essential for the functioning of a society, including hospitals, roads, power grids, and water systems.",
+      "rel": ["Exposure", "Physical Vulnerability", "Systemic Risk", "Recovery", "Response"]
+    },
+
+    
+    {
+      "id": "Hazard Zonation",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The division of land into areas based on the degree of hazard from specific events, creating maps showing hazard intensity or frequency.",
+      "rel": ["Hazard", "Risk Mapping", "Susceptibility Mapping", "Intensity"]
+    },
+    {
+      "id": "Susceptibility Mapping",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "Mapping that identifies areas likely to experience specific hazards based on physical characteristics and historical occurrence.",
+      "rel": ["Hazard", "Hazard Zonation", "Risk Mapping", "Probability"]
+    },
+    {
+      "id": "Risk Mapping",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "The process of combining hazard, exposure, and vulnerability data to create maps showing the spatial distribution of risk.",
+      "rel": ["Risk", "Risk Assessment", "Hazard Zonation", "Susceptibility Mapping", "Exposure"]
+    },
+    {
+      "id": "Inundation Mapping",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 16,
+      "def": "Maps showing the spatial extent and depth of flooding expected from various flood events, used for flood planning and warning.",
+      "rel": ["Hydrological Hazard", "Risk Mapping", "Early Warning System", "Exposure"]
+    },
+    {
+      "id": "Buffer Analysis",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 14,
+      "def": "A GIS technique that creates zones around spatial features to analyze proximity-based risks.",
+      "rel": ["Risk Mapping", "Exposure", "Critical Infrastructure", "Hazard Zonation"]
+    },
+
+    
+    {
+      "id": "Multi-hazard Risk",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 20,
+      "def": "The risk considering multiple hazards that may threaten the same area, accounting for potential interactions between them.",
+      "rel": ["Risk", "Compound Hazard", "Cascading Hazard", "Systemic Risk", "Hazard Zonation"]
+    },
+    {
+      "id": "Systemic Risk",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 20,
+      "def": "The risk of cascading failures across interconnected systems, where disruption in one sector triggers failures in others.",
+      "rel": ["Risk", "Cascading Hazard", "Domino Effect", "Critical Infrastructure", "Natech Disaster"]
+    },
+    {
+      "id": "Natech Disaster",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 18,
+      "def": "A technological disaster triggered by a natural hazard, such as an earthquake causing a chemical plant leak.",
+      "rel": ["Technological Hazard", "Cascading Hazard", "Systemic Risk", "Contingency Planning"]
+    },
+    {
+      "id": "Domino Effect",
+      "cat": "Hazard and Risk Knowledge",
+      "r": 16,
+      "def": "A chain reaction of events where one disaster triggers subsequent disasters in a cascading sequence.",
+      "rel": ["Cascading Hazard", "Systemic Risk", "Compound Hazard", "Natech Disaster"]
+    },
+
+    
+    {
+      "id": "Mortality",
+      "cat": "Disaster Impacts and Measurement",
+      "r": 20,
+      "def": "The death toll resulting from a disaster, measured as the number of fatalities directly or indirectly attributed to the event.",
+      "rel": ["Disaster", "Impact", "Loss and Damage", "Morbidity", "Displacement"]
+    },
+    {
+      "id": "Morbidity",
+      "cat": "Disaster Impacts and Measurement",
+      "r": 20,
+      "def": "The condition of being diseased or injured as a result of a disaster, including illness, injury, and long-term health impacts.",
+      "rel": ["Disaster", "Impact", "Mortality", "Biological Hazard"]
+    },
+    {
+      "id": "Economic Loss",
+      "cat": "Disaster Impacts and Measurement",
+      "r": 22,
+      "def": "The monetary value of total economic damage and disruption caused by a disaster, including direct and indirect losses.",
+      "rel": ["Disaster", "Impact", "Loss and Damage", "Direct Loss", "Indirect Loss", "Asset Exposure"]
+    },
+    {
+      "id": "Direct Loss",
+      "cat": "Disaster Impacts and Measurement",
+      "r": 18,
+      "def": "Immediate physical damage to assets, property, infrastructure, and resources caused directly by the hazard impact.",
+      "rel": ["Impact", "Economic Loss", "Asset Exposure", "Physical Vulnerability", "Reconstruction"]
+    },
+    {
+      "id": "Indirect Loss",
+      "cat": "Disaster Impacts and Measurement",
+      "r": 18,
+      "def": "Secondary economic consequences including business interruption, supply chain disruption, and loss of economic output.",
+      "rel": ["Impact", "Economic Loss", "Livelihood Exposure", "Recovery", "Systemic Risk"]
+    },
+    {
+      "id": "Intangible Loss",
+      "cat": "Disaster Impacts and Measurement",
+      "r": 18,
+      "def": "Non-monetary losses including cultural heritage destruction, psychological trauma, loss of social cohesion, and environmental damage.",
+      "rel": ["Impact", "Loss and Damage", "Recovery", "Social Vulnerability"]
+    },
+    {
+      "id": "Displacement",
+      "cat": "Disaster Impacts and Measurement",
+      "r": 20,
+      "def": "The forced movement of people from their homes or habitual residences due to disaster impacts.",
+      "rel": ["Disaster", "Impact", "Social Vulnerability", "Recovery", "Rehabilitation"]
+    },
+
+    
+    {
+      "id": "Early Warning System",
+      "cat": "Disaster Impacts and Measurement",
+      "r": 24,
+      "def": "An integrated system of hazard monitoring, forecasting, risk assessment, communication, and preparedness that enables timely action.",
+      "rel": ["Forecasting", "Nowcasting", "Lead Time", "Preparedness", "Response", "Meteorological Hazard"]
+    },
+    {
+      "id": "Forecasting",
+      "cat": "Disaster Impacts and Measurement",
+      "r": 20,
+      "def": "The process of predicting hazard events based on scientific data and models, providing information about timing, location, and intensity.",
+      "rel": ["Early Warning System", "Nowcasting", "Probability", "Lead Time", "Meteorological Hazard"]
+    },
+    {
+      "id": "Nowcasting",
+      "cat": "Disaster Impacts and Measurement",
+      "r": 16,
+      "def": "Very short-term weather or hazard forecasting, typically for periods up to a few hours ahead, based on real-time observations.",
+      "rel": ["Forecasting", "Early Warning System", "Lead Time", "Response"]
+    },
+    {
+      "id": "Lead Time",
+      "cat": "Disaster Impacts and Measurement",
+      "r": 16,
+      "def": "The time available between receiving a warning and the onset of a hazard event, used for taking protective action.",
+      "rel": ["Early Warning System", "Forecasting", "Nowcasting", "Preparedness"]
+    },
+
+   
+    {
+      "id": "Mitigation",
+      "cat": "Disaster Management and Governance",
+      "r": 24,
+      "def": "Measures taken to reduce the likelihood or impact of hazards before they occur, including structural and non-structural measures.",
+      "rel": ["Preparedness", "Physical Vulnerability", "Nature-based Solutions", "Build Back Better", "Disaster Risk Reduction (DRR)"]
+    },
+    {
+      "id": "Preparedness",
+      "cat": "Disaster Management and Governance",
+      "r": 24,
+      "def": "Activities and measures taken in advance to ensure effective response to the impact of hazards, including early warning systems and evacuation planning.",
+      "rel": ["Mitigation", "Response", "Early Warning System", "Contingency Planning", "Lead Time"]
+    },
+    {
+      "id": "Response",
+      "cat": "Disaster Management and Governance",
+      "r": 24,
+      "def": "Actions taken immediately before, during, or directly after a disaster to save lives, reduce health impacts, ensure public safety, and meet basic needs.",
+      "rel": ["Preparedness", "Recovery", "Incident Command System", "Coping Capacity"]
+    },
+    {
+      "id": "Recovery",
+      "cat": "Disaster Management and Governance",
+      "r": 24,
+      "def": "The restoration and improvement of facilities, livelihoods, and living conditions of disaster-affected communities, including reconstruction and rehabilitation.",
+      "rel": ["Response", "Rehabilitation", "Reconstruction", "Livelihood Recovery", "Build Back Better", "Resilience"]
+    },
+
+    {
+      "id": "Disaster Risk Reduction (DRR)",
+      "cat": "Disaster Management and Governance",
+      "r": 28,
+      "def": "The policy objective of reducing disaster risks through systematic efforts to analyze and manage the causal factors of disasters.",
+      "rel": ["Mitigation", "Preparedness", "Sendai Framework", "Climate Change Adaptation", "Build Back Better"]
+    },
+    {
+      "id": "Climate Change Adaptation",
+      "cat": "Disaster Management and Governance",
+      "r": 24,
+      "def": "The process of adjustment to actual or expected climate change effects, to moderate harm or exploit beneficial opportunities.",
+      "rel": ["Disaster Risk Reduction (DRR)", "Mitigation (Climate)", "Adaptive Capacity", "Nature-based Solutions"]
+    },
+    {
+      "id": "Mitigation (Climate)",
+      "cat": "Disaster Management and Governance",
+      "r": 20,
+      "def": "Human intervention to reduce the sources or enhance the sinks of greenhouse gases, addressing the root causes of climate change.",
+      "rel": ["Climate Change Adaptation", "Climatological Hazard"]
+    },
+    {
+      "id": "Nature-based Solutions",
+      "cat": "Disaster Management and Governance",
+      "r": 22,
+      "def": "Actions to protect, sustainably manage, and restore ecosystems that address societal challenges, including disaster risk reduction.",
+      "rel": ["Mitigation", "Climate Change Adaptation", "Environmental Vulnerability"]
+    },
+    {
+      "id": "Build Back Better",
+      "cat": "Disaster Management and Governance",
+      "r": 22,
+      "def": "The use of the recovery, rehabilitation, and reconstruction phase to improve the resilience of nations and communities through integrating disaster risk reduction measures.",
+      "rel": ["Recovery", "Reconstruction", "Resilience", "Mitigation", "Physical Vulnerability"]
+    },
+
+   
+    {
+      "id": "Rehabilitation",
+      "cat": "Disaster Management and Governance",
+      "r": 20,
+      "def": "The restoration of basic services and facilities for the functioning of a community after a disaster.",
+      "rel": ["Recovery", "Reconstruction", "Displacement", "Critical Infrastructure"]
+    },
+    {
+      "id": "Reconstruction",
+      "cat": "Disaster Management and Governance",
+      "r": 20,
+      "def": "The rebuilding of physical infrastructure, housing, and facilities destroyed or damaged by a disaster.",
+      "rel": ["Recovery", "Rehabilitation", "Direct Loss", "Build Back Better", "Critical Infrastructure"]
+    },
+    {
+      "id": "Livelihood Recovery",
+      "cat": "Disaster Management and Governance",
+      "r": 20,
+      "def": "The process of restoring and improving the economic activities and income-generating capacity of disaster-affected populations.",
+      "rel": ["Recovery", "Economic Vulnerability", "Livelihood Exposure", "Economic Loss"]
+    },
+    {
+      "id": "Disaster-Resilient Development",
+      "cat": "Disaster Management and Governance",
+      "r": 22,
+      "def": "Development planning that integrates disaster risk reduction to ensure that development gains are protected from hazard impacts.",
+      "rel": ["Resilience", "Disaster Risk Reduction (DRR)", "Sendai Framework"]
+    },
+
+
+    {
+      "id": "Disaster Governance",
+      "cat": "Disaster Management and Governance",
+      "r": 22,
+      "def": "The framework of institutional structures, policies, laws, and regulations through which disaster risk management is implemented.",
+      "rel": ["Institutional Vulnerability", "Sendai Framework", "Contingency Planning", "Incident Command System"]
+    },
+    {
+      "id": "Sendai Framework",
+      "cat": "Disaster Management and Governance",
+      "r": 24,
+      "def": "The global agreement adopted by UN member states for disaster risk reduction 2015-2030, outlining seven targets and four priorities for action.",
+      "rel": ["Disaster Risk Reduction (DRR)", "Disaster Governance"]
+    },
+    {
+      "id": "Contingency Planning",
+      "cat": "Disaster Management and Governance",
+      "r": 22,
+      "def": "A management process that analyses specific potential events and establishes arrangements in advance to enable timely and effective responses.",
+      "rel": ["Preparedness", "Response", "Risk Assessment", "Incident Command System"]
+    },
+    {
+      "id": "Incident Command System",
+      "cat": "Disaster Management and Governance",
+      "r": 22,
+      "def": "A standardized approach to emergency management encompassing personnel, facilities, equipment, procedures, and communications operating under a common organizational structure.",
+      "rel": ["Response", "Contingency Planning", "Disaster Governance"]
+    }
+  ]
+}

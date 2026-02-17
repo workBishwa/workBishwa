@@ -1,0 +1,723 @@
+<!-- 
+  Hazard Dashboard Component
+  Redesigned with enhanced visuals showing related categories
+-->
+<div id="hdn-dash-wrapper">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono&display=swap');
+
+        #hdn-dash-root {
+            --hdn-bg: #0a0c14;
+            --hdn-surface: #121620;
+            --hdn-card: #1a1f2c;
+            --hdn-border: rgba(75, 130, 200, 0.15);
+            --hdn-accent: #3b82f6;
+            --hdn-accent-2: #8b5cf6;
+            --hdn-accent-3: #10b981;
+            --hdn-accent-glow: rgba(59, 130, 246, 0.25);
+            --hdn-text: #f1f5f9;
+            --hdn-sub: #94a3b8;
+            --hdn-muted: #475569;
+            --hdn-panel-w: 420px;
+            --hdn-h: 820px;
+            
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(145deg, var(--hdn-bg) 0%, #0f1420 100%);
+            color: var(--hdn-text);
+            border: 1px solid var(--hdn-border);
+            border-radius: 32px;
+            width: 100%;
+            height: var(--hdn-h);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            margin: 30px 0;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(59, 130, 246, 0.1) inset;
+        }
+
+        #hdn-header {
+            padding: 16px 30px;
+            background: rgba(18, 22, 32, 0.8);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--hdn-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            z-index: 20;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-badge {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--hdn-accent), var(--hdn-accent-2));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: white;
+            box-shadow: 0 8px 16px -4px rgba(59, 130, 246, 0.3);
+        }
+
+        #hdn-main-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--hdn-text);
+            margin: 0;
+            letter-spacing: -0.3px;
+            background: linear-gradient(to right, #fff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .title-badge {
+            font-size: 0.65rem;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 3px 10px;
+            border-radius: 30px;
+            color: var(--hdn-accent);
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            margin-left: 8px;
+        }
+
+        .search-wrapper {
+            position: relative;
+            width: 260px;
+        }
+
+        #hdn-search-input {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 40px;
+            padding: 10px 18px 10px 42px;
+            color: white;
+            font-size: 0.85rem;
+            font-family: 'Outfit', sans-serif;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        #hdn-search-input:focus {
+            border-color: var(--hdn-accent);
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0 3px var(--hdn-accent-glow);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--hdn-sub);
+            font-size: 0.9rem;
+            pointer-events: none;
+        }
+
+        .category-indicator {
+            display: flex;
+            gap: 8px;
+            margin-left: 15px;
+        }
+
+        .cat-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            transition: transform 0.2s;
+        }
+
+        .cat-dot:hover {
+            transform: scale(1.3);
+        }
+
+        #hdn-main {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        #hdn-graph-area { 
+            flex: 1; 
+            background: radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 60%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+                        var(--hdn-bg);
+            position: relative;
+        }
+
+        #hdn-loading-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 12, 20, 0.8);
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--hdn-sub);
+            gap: 20px;
+        }
+
+        .spinner-container {
+            position: relative;
+            width: 60px;
+            height: 60px;
+        }
+
+        .spinner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top-color: var(--hdn-accent);
+            border-right-color: var(--hdn-accent-2);
+            border-bottom-color: var(--hdn-accent-3);
+            border-radius: 50%;
+            animation: hdn-spin 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+        }
+
+        .spinner-inner {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 2px solid rgba(255,255,255,0.1);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: hdn-spin 0.8s linear infinite reverse;
+        }
+
+        @keyframes hdn-spin { 
+            to { transform: rotate(360deg); } 
+        }
+
+        #hdn-dp {
+            width: var(--hdn-panel-w);
+            background: rgba(18, 22, 32, 0.85);
+            backdrop-filter: blur(24px);
+            border-left: 1px solid var(--hdn-border);
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+            box-shadow: -10px 0 30px -15px rgba(0, 0, 0, 0.5);
+        }
+
+        #hdn-dp-header { 
+            padding: 35px 30px 20px; 
+            border-bottom: 1px solid var(--hdn-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hdn-dp-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--hdn-accent), var(--hdn-accent-2), var(--hdn-accent-3));
+            opacity: 0.5;
+        }
+
+        #hdn-dp-cat { 
+            font-size: 0.7rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.2em; 
+            color: var(--hdn-sub); 
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        #hdn-dp-title { 
+            font-family: 'Space Grotesk', sans-serif; 
+            font-weight: 700; 
+            font-size: 2.2rem; 
+            line-height: 1.1; 
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .category-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-top: 8px;
+        }
+
+        #hdn-dp-body { 
+            padding: 25px 30px 30px; 
+            flex: 1; 
+            overflow-y: auto; 
+            font-size: 0.95rem; 
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .related-section {
+            margin-top: 25px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 20px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .related-title {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--hdn-sub);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .related-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .related-chip {
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            color: var(--hdn-text);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .related-chip:hover {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: var(--hdn-accent);
+            transform: translateY(-2px);
+        }
+
+        .stats-mini {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed rgba(255,255,255,0.1);
+        }
+
+        .stat-mini-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .stat-mini-value {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--hdn-accent);
+        }
+
+        .stat-mini-label {
+            font-size: 0.65rem;
+            color: var(--hdn-sub);
+            text-transform: uppercase;
+        }
+
+        .lk { 
+            stroke: rgba(100, 120, 150, 0.25); 
+            stroke-width: 1.5; 
+            transition: stroke 0.3s, stroke-opacity 0.3s;
+        }
+        
+        .nd circle { 
+            transition: r 0.3s, fill 0.3s, stroke 0.3s, filter 0.3s; 
+            cursor: pointer; 
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+        }
+        
+        .nd text { 
+            font-family: 'JetBrains Mono', monospace; 
+            font-size: 8px; 
+            fill: var(--hdn-sub); 
+            pointer-events: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .nd.active circle { 
+            stroke-width: 3px; 
+            stroke: white; 
+            filter: drop-shadow(0 0 15px currentColor);
+            r: calc(attr(r) * 1.2);
+        }
+        
+        .nd.dim { opacity: 0.25; }
+        .lk.dim { stroke-opacity: 0.05; }
+
+        .nd.highlight circle {
+            stroke-width: 2.5px;
+            stroke: white;
+        }
+
+        .category-legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(18, 22, 32, 0.7);
+            backdrop-filter: blur(8px);
+            padding: 12px 18px;
+            border-radius: 40px;
+            border: 1px solid var(--hdn-border);
+            display: flex;
+            gap: 20px;
+            z-index: 15;
+            font-size: 0.7rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 4px;
+        }
+    </style>
+
+    <div id="hdn-dash-root">
+        <header id="hdn-header">
+            <div class="header-left">
+                <div class="logo-badge">⛑️</div>
+                <div>
+                    <h1 id="hdn-main-title">
+                        HAZARD INTELLIGENCE
+                        <span class="title-badge">By Bishwa</span>
+                    </h1>
+                </div>
+            </div>
+            
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="hdn-search-input" placeholder="Search components...">
+            </div>
+
+            <div class="category-indicator" id="categoryIndicator"></div>
+        </header>
+
+        <div id="hdn-main">
+            <div id="hdn-graph-area">
+                <div id="hdn-loading-overlay">
+                    <div class="spinner-container">
+                        <div class="spinner"></div>
+                        <div class="spinner-inner"></div>
+                    </div>
+                    <div id="hdn-loading-text">Loading System Data...</div>
+                </div>
+                <svg id="hdn-svg" style="width:100%; height:100%"></svg>
+                
+                <div class="category-legend" id="categoryLegend"></div>
+            </div>
+            
+            <div id="hdn-dp">
+                <div id="hdn-dp-header">
+                    <div id="hdn-dp-cat">Node Inspector</div>
+                    <div id="hdn-dp-title">Waiting...</div>
+                    <div class="category-tag" id="dpCategoryTag">—</div>
+                </div>
+                <div id="hdn-dp-body">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; opacity: 0.5;">
+                        Select a node to begin analysis
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script>
+    (function() {
+        const DATA_URL = "{{ '/assets/data/hazards.json' | relative_url }}";
+
+        function init(data) {
+            d3.select("#hdn-loading-overlay").transition().duration(500).style("opacity", 0).remove();
+
+            const nodes = data.nodes;
+            const categories = data.categories;
+            const edges = [];
+            
+            // Build edges from relationships
+            nodes.forEach(n => {
+                (n.rel || []).forEach(targetId => {
+                    if (nodes.find(node => node.id === targetId)) {
+                        edges.push({ source: n.id, target: targetId });
+                    }
+                });
+            });
+
+            // Setup category indicator
+            const catIndicator = document.getElementById('categoryIndicator');
+            const legendContainer = document.getElementById('categoryLegend');
+            
+            Object.entries(categories).forEach(([key, cat]) => {
+                // Header dots
+                const dot = document.createElement('div');
+                dot.className = 'cat-dot';
+                dot.style.background = cat.color;
+                dot.title = `${key}: ${cat.desc || ''}`;
+                catIndicator.appendChild(dot);
+                
+                // Legend items
+                const legendItem = document.createElement('div');
+                legendItem.className = 'legend-item';
+                legendItem.innerHTML = `
+                    <div class="legend-color" style="background: ${cat.color}"></div>
+                    <span>${key}</span>
+                `;
+                legendContainer.appendChild(legendItem);
+            });
+
+            const svg = d3.select("#hdn-svg");
+            const container = document.getElementById('hdn-graph-area');
+            const g = svg.append("g");
+
+            // Calculate degree for node sizing
+            const degree = new Map();
+            edges.forEach(e => {
+                degree.set(e.source, (degree.get(e.source) || 0) + 1);
+                degree.set(e.target, (degree.get(e.target) || 0) + 1);
+            });
+
+            nodes.forEach(n => {
+                n.degree = degree.get(n.id) || 0;
+            });
+
+            // Force simulation
+            const simulation = d3.forceSimulation(nodes)
+                .force("link", d3.forceLink(edges).id(d => d.id).distance(d => 150 - Math.min(d.source.degree * 2, 50)))
+                .force("charge", d3.forceManyBody().strength(d => -400 - (d.degree * 10)))
+                .force("center", d3.forceCenter(container.clientWidth / 2, container.clientHeight / 2))
+                .force("collide", d3.forceCollide().radius(d => (d.r || 18) + 25));
+
+            const zoom = d3.zoom()
+                .scaleExtent([0.2, 3])
+                .on("zoom", (e) => g.attr("transform", e.transform));
+            
+            svg.call(zoom);
+
+            // Draw links
+            const link = g.append("g").selectAll("line")
+                .data(edges)
+                .join("line")
+                .attr("class", "lk");
+
+            // Draw nodes
+            const node = g.append("g").selectAll("g")
+                .data(nodes)
+                .join("g")
+                .attr("class", "nd")
+                .on("click", (e, d) => { 
+                    e.stopPropagation(); 
+                    updateInspector(d); 
+                })
+                .call(d3.drag()
+                    .on("start", (e, d) => {
+                        if (!e.active) simulation.alphaTarget(0.3).restart();
+                        d.fx = d.x;
+                        d.fy = d.y;
+                    })
+                    .on("drag", (e, d) => {
+                        d.fx = e.x;
+                        d.fy = e.y;
+                    })
+                    .on("end", (e, d) => {
+                        if (!e.active) simulation.alphaTarget(0);
+                        d.fx = null;
+                        d.fy = null;
+                    })
+                );
+
+            // Add circles with gradient fills
+            node.append("circle")
+                .attr("r", d => d.r || (15 + d.degree))
+                .attr("fill", d => {
+                    const color = categories[d.cat]?.color || "#444";
+                    return color;
+                })
+                .attr("fill-opacity", 0.3)
+                .attr("stroke", d => categories[d.cat]?.color || "#444")
+                .attr("stroke-width", 1.8);
+
+            // Add labels
+            node.append("text")
+                .attr("dy", d => (d.r || 18) + 15)
+                .attr("text-anchor", "middle")
+                .text(d => d.id);
+
+            // Simulation tick
+            simulation.on("tick", () => {
+                link
+                    .attr("x1", d => d.source.x)
+                    .attr("y1", d => d.source.y)
+                    .attr("x2", d => d.target.x)
+                    .attr("y2", d => d.target.y);
+                
+                node.attr("transform", d => `translate(${d.x},${d.y})`);
+            });
+
+            // Update inspector panel
+            function updateInspector(d) {
+                const category = categories[d.cat] || { color: "var(--hdn-accent)" };
+                
+                document.getElementById('hdn-dp-title').innerText = d.id;
+                document.getElementById('hdn-dp-title').style.color = category.color;
+                document.getElementById('hdn-dp-cat').innerText = "Selected Node";
+                document.getElementById('dpCategoryTag').innerText = d.cat;
+                document.getElementById('dpCategoryTag').style.background = `${category.color}20`;
+                document.getElementById('dpCategoryTag').style.borderColor = `${category.color}40`;
+                
+                // Build definition and related terms
+                let html = `
+                    <div style="margin-bottom: 20px; line-height: 1.7;">${d.def}</div>
+                `;
+                
+                // Add mini stats
+                html += `
+                    <div class="stats-mini">
+                        <div class="stat-mini-item">
+                            <div class="stat-mini-value">${d.degree || 0}</div>
+                            <div class="stat-mini-label">Connections</div>
+                        </div>
+                        <div class="stat-mini-item">
+                            <div class="stat-mini-value">${d.r || 18}</div>
+                            <div class="stat-mini-label">Radius</div>
+                        </div>
+                    </div>
+                `;
+                
+                // Add related terms section
+                if (d.rel && d.rel.length > 0) {
+                    html += `
+                        <div class="related-section">
+                            <div class="related-title">🔗 Related Components</div>
+                            <div class="related-chips">
+                                ${d.rel.map(relId => {
+                                    const relNode = nodes.find(n => n.id === relId);
+                                    const relColor = relNode ? categories[relNode.cat]?.color : '#666';
+                                    return `<span class="related-chip" style="border-color: ${relColor}40; color: ${relColor}" onclick="window.selectNode('${relId}')">${relId}</span>`;
+                                }).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                document.getElementById('hdn-dp-body').innerHTML = html;
+                
+                // Highlight active node and its connections
+                const connectedNodes = new Set();
+                edges.forEach(e => {
+                    if (e.source.id === d.id) connectedNodes.add(e.target.id);
+                    if (e.target.id === d.id) connectedNodes.add(e.source.id);
+                });
+                
+                node.classed('active', n => n.id === d.id);
+                node.classed('dim', n => n.id !== d.id && !connectedNodes.has(n.id));
+                node.classed('highlight', n => connectedNodes.has(n.id));
+                
+                link.classed('dim', l => l.source.id !== d.id && l.target.id !== d.id);
+            }
+
+            // Clear selection on background click
+            svg.on("click", () => {
+                node.classed('active dim highlight', false);
+                link.classed('dim', false);
+                
+                document.getElementById('hdn-dp-title').innerText = "Waiting...";
+                document.getElementById('hdn-dp-title').style.color = "";
+                document.getElementById('hdn-dp-cat').innerText = "Node Inspector";
+                document.getElementById('dpCategoryTag').innerText = "—";
+                document.getElementById('hdn-dp-body').innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; opacity: 0.5;">
+                        Select a node to begin analysis
+                    </div>
+                `;
+            });
+
+            // Search functionality
+            document.getElementById('hdn-search-input').addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                if (query.length < 2) {
+                    node.classed('dim', false);
+                    link.classed('dim', false);
+                    return;
+                }
+                
+                const matches = nodes.filter(n => 
+                    n.id.toLowerCase().includes(query) || 
+                    n.def.toLowerCase().includes(query)
+                );
+                
+                const matchIds = new Set(matches.map(m => m.id));
+                
+                node.classed('dim', n => !matchIds.has(n.id));
+                link.classed('dim', l => !matchIds.has(l.source.id) && !matchIds.has(l.target.id));
+                
+                if (matches.length === 1) {
+                    updateInspector(matches[0]);
+                    
+                    // Center on node
+                    const node = matches[0];
+                    if (node.x && node.y) {
+                        const transform = d3.zoomTransform(svg.node());
+                        svg.transition().duration(500).call(
+                            zoom.transform,
+                            d3.zoomIdentity.translate(
+                                container.clientWidth/2 - transform.k * node.x,
+                                container.clientHeight/2 - transform.k * node.y
+                            ).scale(transform.k)
+                        );
+                    }
+                }
+            });
+
+            // Global select function
+            window.selectNode = (id) => {
+                const node = nodes.find(n => n.id === id);
+                if (node) updateInspector(node);
+            };
+        }
+
+        // Load and initialize
+        d3.json(DATA_URL).then(init).catch(err => {
+            console.error("Path Error:", DATA_URL, err);
+            document.getElementById('hdn-loading-text').innerHTML = 
+                `<div style="color:#f87171; text-align:center; padding:20px;">
+                    <strong>⛔ Data Not Found</strong><br>
+                    <span style="font-size:0.8rem;">Tried: ${DATA_URL}</span><br>
+                    <span style="font-size:0.7rem; opacity:0.7;">Ensure file at /assets/data/hazards.json</span>
+                </div>`;
+        });
+    })();
+    </script>
+</div>
